@@ -38,7 +38,6 @@
 	<tiles:insertAttribute name ="menu"/>
 	<tiles:insertAttribute name ="body"/>
 	<tiles:insertAttribute name ="footer"/>
-
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->
