@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Eunbi
-  Date: 2018-03-23
-  Time: 오전 11:06
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -40,6 +34,10 @@
 <body>
 
 <section id="container" >
+	<tiles:insertAttribute name ="header"/>
+	<tiles:insertAttribute name ="menu"/>
+	<tiles:insertAttribute name ="body"/>
+	<tiles:insertAttribute name ="footer"/>
 
 </section>
 
