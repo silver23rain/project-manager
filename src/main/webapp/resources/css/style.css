@@ -184,7 +184,7 @@ hr {
 }
 
 .mt {
-	margin-top: 25px;
+	margin-top: 40px;
 }
 
 .mb {
@@ -229,7 +229,7 @@ ul.top-menu > li > .logout {
 /*sidebar navigation*/
 
 #sidebar {
-    width: 210px;
+    width: 230px;
     height: 100%;
     position: fixed;
     background: #424a5d;
@@ -257,7 +257,6 @@ ul.top-menu > li > .logout {
     height:17px;
     width:17px;
     display:inline-block;
-    background: url("../img/nav-expand.png") no-repeat top;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -266,7 +265,6 @@ ul.top-menu > li > .logout {
     top:15px;
 }
 .active .dcjq-icon {
-    background: url("../img/nav-expand.png") no-repeat bottom;
     border-radius:3px;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -420,7 +418,7 @@ ul.sidebar-menu li a.active i {
 .wrapper {
     display: inline-block;
     margin-top: 60px;
-    padding-left: 15px;
+    padding-left: 35px;
     padding-right: 15px;
     padding-bottom: 15px;
     padding-top: 0px;
@@ -510,7 +508,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     /* Safari and Chrome */
     .dropdown-menu.extended  {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
-    };
+    }
     }
 
 .dropdown-menu.extended li p {
@@ -695,7 +693,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .log-arrow-up {
-    background: url("../img/arrow-up.png") no-repeat;
     width: 20px;
     height: 11px;
     position: absolute;
@@ -1636,7 +1633,7 @@ PANELS CONFIGURATIONS
 }
 
 /* showcase background */
-.showback {
+.panel {
 	background: #ffffff;
 	padding: 15px;
 	margin-bottom: 15px;
@@ -2101,7 +2098,7 @@ label {
     /* Safari and Chrome */
     .panel-footer.revenue-foot {
         margin-bottom: -4px;
-    };
+    }
     }
 
 

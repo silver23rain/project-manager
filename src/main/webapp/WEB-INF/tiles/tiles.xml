@@ -13,5 +13,7 @@
     <definition name ="/" extends="base">
         <put-attribute name="body" value="/WEB-INF/views/dashboard.jsp"/>
     </definition>
-
+    <definition name ="/projectlist" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/projectlist.jsp"/>
+    </definition>
 </tiles-definitions>
