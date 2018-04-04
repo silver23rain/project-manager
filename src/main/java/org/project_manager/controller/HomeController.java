@@ -13,7 +13,7 @@ public class HomeController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
 	@RequestMapping("")
 	public String home(Model model) {
-//		LOGGER.info("homeController....");
+		LOGGER.info("homeController....");
 		model.addAttribute("greeting", "hello world");
 		return "/";
 	}

@@ -12,6 +12,7 @@
 
     <!--기본패키지 설정-->
     <context:component-scan base-package="org.project_manager"/>
+    <context:component-scan base-package="org.project_manager.*"/>
 
     <!--viewResolver 설정-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,5 +32,11 @@
         </property>
     </bean>
 
-    <!--dataSource-->
+    <!--interceptor 설정-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/"/>
+            <bean class="org.project_manager.interceptor.LoggingInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
