@@ -15,7 +15,7 @@ public class HomeController {
 	public String home(Model model) {
 		LOGGER.info(" info.. HomeController");
 		model.addAttribute("greeting", "hello world");
-		return "/";
+		return "/dashboard";
 	}
 
 }

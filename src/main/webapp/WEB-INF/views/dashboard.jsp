@@ -19,3 +19,14 @@
 		</div>
 	</section>
 </section>
+<script>
+	//custom select box
+	$(function () {
+		init();
+	});
+
+	var init = function () {
+		$(".sub-menu a").removeClass('active');
+		$(".sub-menu-dashboard a").addClass('active');
+	}
+</script>

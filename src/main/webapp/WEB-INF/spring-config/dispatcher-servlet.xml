@@ -43,6 +43,12 @@
         <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
             <property name="paramName" value="lang"/>
         </bean>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/"/>
+            <bean class="org.project_manager.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+
         <mvc:interceptor>
             <mvc:mapping path="/"/>
             <bean class="org.project_manager.interceptor.LoggingInterceptor"/>
