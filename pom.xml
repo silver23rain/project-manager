@@ -167,6 +167,13 @@
             <version>${org.apache.tiles.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-api</artifactId>
+            <version>${org.apache.tiles.version}</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <finalName>project-manager</finalName>

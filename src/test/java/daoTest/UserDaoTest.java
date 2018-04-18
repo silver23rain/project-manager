@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.inject.Inject;
+import javax.jws.soap.SOAPBinding;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,5 +28,19 @@ public class UserDaoTest {
 			System.out.println(dto);
 		}
 		System.out.println("==========================================");
+	}
+
+	@Test
+	public void checkUserTest(){
+		UserDTO loginUser = new UserDTO();
+		loginUser.setUser_id("eunbi");
+		loginUser.setUser_password("eunbi1234");
+		UserDTO userDTO = userDAO.checkUser(loginUser);
+
+		if(userDTO != null){
+			System.out.println("loginUser : " + userDTO.toString());
+		}else{
+			System.out.println("해당사용자가 없습니다.");
+		}
 	}
 }
