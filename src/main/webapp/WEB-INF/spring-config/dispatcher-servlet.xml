@@ -44,13 +44,20 @@
             <property name="paramName" value="lang"/>
         </bean>
 
-        <mvc:interceptor>
-            <mvc:mapping path="/"/>
-            <bean class="org.project_manager.interceptor.LoginInterceptor"/>
-        </mvc:interceptor>
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/user/signin"/>-->
+            <!--<bean class="org.project_manager.interceptor.LoginInterceptor"/>-->
+        <!--</mvc:interceptor>-->
 
         <mvc:interceptor>
             <mvc:mapping path="/"/>
+            <mvc:mapping path="/project/**"/>
+            <bean class="org.project_manager.interceptor.AuthInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/"/>
+            <mvc:mapping path="/*"/>
+            <mvc:mapping path="/project"/>
             <bean class="org.project_manager.interceptor.LoggingInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

@@ -5,6 +5,6 @@
 
 <mapper namespace="org.project_manager.ProjectMapper">
     <select id="getProjectList" resultType="org.project_manager.domain.ProjectDTO">
-        select * from project;
+        select * from project_manager.project;
     </select>
 </mapper>

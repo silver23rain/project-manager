@@ -1,4 +1,4 @@
-
+<%@ page contentType="text/html; charset=utf-8"  pageEncoding="UTF-8" %>
 <header class="header black-bg">
 	<div class="sidebar-toggle-box">
 		<div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
@@ -91,7 +91,7 @@
 					</li>
 					<li>
 						<a href="index.html#">
-							<span class="photo"><img alt="avatar" src="resources/img/ui-zac.jpg"></span>
+							<span class="photo"><img alt="avatar" src="/resources/img/ui-zac.jpg"></span>
 							<span class="subject">
                                     <span class="from">Zac Snider</span>
                                     <span class="time">Just now</span>
@@ -103,7 +103,7 @@
 					</li>
 					<li>
 						<a href="index.html#">
-							<span class="photo"><img alt="avatar" src="resources/img/ui-divya.jpg"></span>
+							<span class="photo"><img alt="avatar" src="/resources/img/ui-divya.jpg"></span>
 							<span class="subject">
                                     <span class="from">Divya Manian</span>
                                     <span class="time">40 mins.</span>
@@ -115,7 +115,7 @@
 					</li>
 					<li>
 						<a href="index.html#">
-							<span class="photo"><img alt="avatar" src="resources/img/ui-danro.jpg"></span>
+							<span class="photo"><img alt="avatar" src="/resources/img/ui-danro.jpg"></span>
 							<span class="subject">
                                     <span class="from">Dan Rogers</span>
                                     <span class="time">2 hrs.</span>
@@ -127,7 +127,7 @@
 					</li>
 					<li>
 						<a href="index.html#">
-							<span class="photo"><img alt="avatar" src="resources/img/ui-sherman.jpg"></span>
+							<span class="photo"><img alt="avatar" src="/resources/img/ui-sherman.jpg"></span>
 							<span class="subject">
                                     <span class="from">Dj Sherman</span>
                                     <span class="time">4 hrs.</span>
@@ -148,7 +148,7 @@
 	</div>
 	<div class="top-menu">
 		<ul class="nav pull-right top-menu">
-			<li><a class="logout" href="login.html">Logout</a></li>
+			<li><a class="logout" href="/user/signout">로그아웃</a></li>
 		</ul>
 	</div>
 </header>

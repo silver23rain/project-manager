@@ -18,4 +18,8 @@ public class UserDAO {
 	public List<UserDTO> getUserList(){
 		return sqlSession.selectList(namespace+".getUserList");
 	}
+
+	public UserDTO checkUser(UserDTO userDTO){
+		return sqlSession.selectOne(namespace +".checkUser",userDTO);
+	}
 }

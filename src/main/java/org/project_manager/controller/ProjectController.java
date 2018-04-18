@@ -20,8 +20,8 @@ public class ProjectController {
 		return "/projectlist";
 	}
 
-	@RequestMapping(value = "/create")
-	public void createProject(){
-
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public String createProject(){
+		return "/project/create";
 	}
 }
