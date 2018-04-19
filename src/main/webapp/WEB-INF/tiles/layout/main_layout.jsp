@@ -16,6 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="/resources/js/gritter/css/jquery.gritter.css"/>
 	<link rel="stylesheet" type="text/css" href="/resources/lineicons/style.css">
 
+	<link href="/resources/css/common/util.css" rel="stylesheet">
+
 	<!-- Custom styles for this template -->
 	<link href="/resources/css/style.css" rel="stylesheet">
 	<link href="/resources/css/style-responsive.css" rel="stylesheet">
