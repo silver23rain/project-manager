@@ -5,11 +5,11 @@
 
 <mapper namespace="org.project_manager.UserMapper">
     <select id="getUserList" resultType="UserDTO">
-        select * from project_manager.user
+        select * from user
     </select>
 
     <select id="checkUser" resultType="UserDTO" parameterType="UserDTO">
-        select * from project_manager.user
+        select * from user
         where user_id = #{user_id}
         AND user_password = #{user_password}
     </select>

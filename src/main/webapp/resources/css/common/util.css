@@ -1,0 +1,22 @@
+.alert-div{
+    height: 20px;
+}
+
+.empty_row {
+    text-align: center;
+    border: 1px solid #c0c0c0;
+    border-top: 0px;
+    margin-top: -2px;
+    line-height: 33px;
+    height: 33px;
+    background-color: #fafafa;
+}
+
+.grid{
+    margin-top: 10px;
+}
+.grid tr:first-child td{
+    font-weight: bold;
+    margin-top: 10px;
+    text-align:center;
+}

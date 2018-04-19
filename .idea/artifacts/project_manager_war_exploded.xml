@@ -22,7 +22,6 @@
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:6.0.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.6" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
@@ -32,11 +31,16 @@
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-template:3.0.0" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.0.0" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-jsp:1.0.0" />
-          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-api:1.0.0" />
           <element id="library" level="project" name="Maven: org.apache.tiles:tiles-core:3.0.0" />
-          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:3.0.0" />
           <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.0" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:3.0.0" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-api:1.0.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.1.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.8" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

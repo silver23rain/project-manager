@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
@@ -44,16 +44,12 @@
             <property name="paramName" value="lang"/>
         </bean>
 
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/user/signin"/>-->
-            <!--<bean class="org.project_manager.interceptor.LoginInterceptor"/>-->
-        <!--</mvc:interceptor>-->
-
         <mvc:interceptor>
             <mvc:mapping path="/"/>
             <mvc:mapping path="/project/**"/>
             <bean class="org.project_manager.interceptor.AuthInterceptor"/>
         </mvc:interceptor>
+
         <mvc:interceptor>
             <mvc:mapping path="/"/>
             <mvc:mapping path="/*"/>
@@ -61,6 +57,7 @@
             <bean class="org.project_manager.interceptor.LoggingInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
+
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="defaultEncoding" value="UTF-8"/>
         <property name="basename">
