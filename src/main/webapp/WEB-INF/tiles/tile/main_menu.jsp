@@ -1,4 +1,3 @@
-<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=utf-8"  pageEncoding="UTF-8" %>
 <aside>
 	<div id="sidebar" class="nav-collapse ">
