@@ -7,7 +7,7 @@
 <script src="/resources/js/tasks.js" type="text/javascript"></script>
 <section id="main-content">
 	<section class="wrapper">
-		<h3><i class="fa fa-angle-right"></i>백로그</h3>
+		<h3><i class="fa fa-angle-down"></i>백로그 목록</h3>
 		<div class="row mb">
 			<div class="col-md-12">
 				<section class="task-panel tasks-widget">

@@ -20,10 +20,9 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<!--common script for all pages-->
-	<script src="/resources/js/common-scripts.js"></script>
 </head>
 <body>
+<section id="container">
 	<script src="/resources/js/bootstrap.min.js"></script>
 	<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="/resources/js/jquery.scrollTo.min.js"></script>
@@ -35,5 +34,21 @@
 		<tiles:insertAttribute name="body"/>
 		<tiles:insertAttribute name="footer"/>
 	</div>
+</section>
+<!--common script for all pages-->
+<script src="/resources/js/common-scripts.js"></script>
+
+<script type="application/javascript">
+	$(document).ready(function () {
+		$("#date-popover").popover({html: true, trigger: "manual"});
+		$("#date-popover").hide();
+		$("#date-popover").click(function (e) {
+			$(this).hide();
+		});
+
+	});
+
+</script>
+
 </body>
 </html>
