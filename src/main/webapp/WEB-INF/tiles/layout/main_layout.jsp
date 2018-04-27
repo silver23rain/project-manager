@@ -1,11 +1,6 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <html lang="ko">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Dashboard">
-	<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
 	<title>Project Manager</title>
 
 	<!-- Bootstrap core CSS -->
@@ -58,7 +53,7 @@
 </section>
 
 <!--common script for all pages-->
-<script src="resources/js/common-scripts.js"></script>
+<script src="/resources/js/common-scripts.js"></script>
 
 <script type="text/javascript" src="/resources/js/gritter/js/jquery.gritter.js"></script>
 <script type="text/javascript" src="/resources/js/gritter-conf.js"></script>
