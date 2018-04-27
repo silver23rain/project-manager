@@ -11,7 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="/resources/lineicons/style.css">
 
 	<!-- Bootstrap core CSS -->
-	<link href="/resources/css/bootstrap.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="/resources/css/style.css" rel="stylesheet">
+	<link href="/resources/css/style-responsive.css" rel="stylesheet">
 
 
 	<link href="/resources/css/common/util.css" rel="stylesheet">
@@ -22,19 +24,21 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
-	<!--common script for all pages-->
-	<script src="/resources/js/common-scripts.js"></script>
 </head>
 <body>
-	<script src="/resources/js/jquery-1.11.1.js"></script>
-	<script src="/resources/js/jquery-1.11.1.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/common/util.js"></script>
-	<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
-	<script src="/resources/js/jquery.scrollTo.min.js"></script>
+	<section id="container">
+		<script src="/resources/js/jquery-1.11.1.js"></script>
+		<script src="/resources/js/jquery-1.11.1.min.js"></script>
+		<script src="/resources/js/bootstrap.min.js"></script>
+		<script src="/resources/js/common/util.js"></script>
+		<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
+		<script src="/resources/js/jquery.scrollTo.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.5.rc1.min.css" />
-	<tiles:insertAttribute name="header"/>
-	<tiles:insertAttribute name="body"/>
+		<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.5.rc1.min.css" />
+		<tiles:insertAttribute name="header"/>
+		<tiles:insertAttribute name="body"/>
+	</section>
+<!--common script for all pages-->
+<script src="/resources/js/common-scripts.js"></script>
 </body>
 </html>
