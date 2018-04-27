@@ -45,7 +45,6 @@
 		$("#date-popover").click(function (e) {
 			$(this).hide();
 		});
-
 	});
 
 </script>

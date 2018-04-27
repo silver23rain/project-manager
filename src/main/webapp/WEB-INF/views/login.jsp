@@ -6,9 +6,13 @@
 			<h2 class="form-login-heading">로그인</h2>
 			<div class="login-wrap">
 				<input type="text" name="user_id" id="user_id" class="form-control" placeholder="아이디" autofocus>
-				<div class="alert-danger" id="user_id_alert"></div>
+				<div class="alert-div">
+					<div class="alert-danger" id="user_id_alert"></div>
+				</div>
 				<input type="password" name="user_password" id="user_password" class="form-control" placeholder="비밀번호">
-				<div class="alert-danger" id="user_pw_alert"></div>
+				<div class="alert-div">
+					<div class="alert-danger" id="user_pw_alert"></div>
+				</div>
 				<label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> 비밀번호가 기억나지 않으십니까?</a>
@@ -61,7 +65,7 @@
 </div>
 <script type="text/javascript" src="/resources/js/user/login.js"></script>
 <script>
-	$(function () {
+	$(function() {
 		bindEvents();
 	});
 </script>

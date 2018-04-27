@@ -5,11 +5,21 @@
 
 <mapper namespace="org.project_manager.ProjectMapper">
     <select id="getProjectList" resultType="java.util.HashMap" parameterType="String">
-        select project.project_id, project_name , project_key,user_id as project_manager ,project_content
-        from project JOIN project_user
-        ON project.project_id = project_user.project_id
-        where project_user.user_id = #{user_id}
-        and project_user.project_position ="팀장"
+       select a.project_id, a.project_name, a.project_key, a.project_content, b.user_id as project_manager from(
+            select project.project_id as project_id, project_name , project_key ,project_content
+            from project_user join project
+            on project_user.project_id = project.project_id
+            join user
+            on user.user_id = project_user.user_id
+            where user.user_id = #{user_id}
+        ) as a
+        join (
+            select project_user.user_id as user_id , project_user.project_id as project_id from project_user
+            join project
+            on project_user.project_id = project.project_id
+            where project_user.project_position = '팀장'
+        ) as b
+        on a.project_id = b.project_id
     </select>
 
     <insert id="createProject" parameterType="ProjectDTO" useGeneratedKeys= "true" keyProperty="project_id">
@@ -37,4 +47,5 @@
             where project_user.user_id = #{user_id}
             and project.project_key =#{project_key}
     </select>
+
 </mapper>

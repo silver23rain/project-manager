@@ -7,7 +7,7 @@
 
     <bean lazy-init="false" class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
         <property value="com.mysql.jdbc.Driver" name="driverClassName"/>
-        <property value="jdbc:mysql://192.168.10.73:3306/project_manager?serverTimezone=UTC" name="url"/>
+        <property value="jdbc:mysql://192.168.10.73:3309/project_manager?serverTimezone=UTC" name="url"/>
         <property value="test" name="username"/>
         <property value="1234" name="password"/>
     </bean>
