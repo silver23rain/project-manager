@@ -1,6 +1,10 @@
 .alert-div{
     height: 25px;
 }
+.alert-div .alert-danger{
+    margin-top: 3px;
+    padding: 3px;
+}
 
 .empty_row {
     text-align: center;

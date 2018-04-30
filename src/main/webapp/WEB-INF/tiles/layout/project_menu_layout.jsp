@@ -28,6 +28,7 @@
 	<script src="/resources/js/jquery.scrollTo.min.js"></script>
 	<script src="/resources/js/jquery.sparkline.js"></script>
 
+	<script src="/resources/js/common/util.js"></script>
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>
 	<div id="main_body">

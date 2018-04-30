@@ -2158,29 +2158,29 @@ label {
 }
 
 /*todolist*/
-#sortable {
+.sortable {
     list-style-type: none;
     margin: 0 0 20px 0;
     padding: 0;
     width: 100%;
 }
-#sortable li {
+.sortable li {
     padding-left: 3em;
     font-size: 12px;
 }
-#sortable li i {
+.sortable li i {
     position: absolute;
     left:6px;
     padding:4px 10px 0 10px;
     cursor: pointer;
 }
 
-#sortable li input[type=checkbox]{
+.sortable li input[type=checkbox]{
     margin-top: 0;
 }
 
 .ui-sortable > li {
-    padding: 15px 0 15px 35px !important ;
+    padding: 11px 0 15px 35px !important ;
     position: relative;
     background: #f5f6f8;
     margin-bottom: 2px;
