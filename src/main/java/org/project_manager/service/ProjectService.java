@@ -35,7 +35,6 @@ public class ProjectService {
 		projectDAO.createProject(projectDTO);
 		insertProjectUser(projectDTO.getProject_id(), userDTO);
 
-		//TODO : project_key 생성
 
 		return ResultCode.SUCCESS;
 	}
