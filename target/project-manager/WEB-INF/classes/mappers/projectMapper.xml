@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project_manager.ProjectMapper">
+    <select id="getProjectList" resultType="java.util.HashMap" parameterType="String">
+       select a.project_id, a.project_name, a.project_key, a.project_content, b.user_id as project_manager from(
+            select project.project_id as project_id, project_name , project_key ,project_content
+            from project_user join project
+            on project_user.project_id = project.project_id
+            join user
+            on user.user_id = project_user.user_id
+            where user.user_id = #{user_id}
+        ) as a
+        join (
+            select project_user.user_id as user_id , project_user.project_id as project_id from project_user
+            join project
+            on project_user.project_id = project.project_id
+            where project_user.project_position = '팀장'
+        ) as b
+        on a.project_id = b.project_id
+    </select>
+
+    <insert id="createProject" parameterType="ProjectDTO" useGeneratedKeys= "true" keyProperty="project_id">
+        insert into project(project_name,project_key, project_content)
+        values(#{project_name},#{project_key}, #{project_content})
+    </insert>
+    
+    <insert id="insertProjectUser" parameterType="ProjectUserDTO">
+        insert into project_user(project_id, user_id, project_position, authority)
+        values(#{project_id}, #{user_id}, #{project_position}, #{authority})
+    </insert>
+
+    <select id="checkDuplicatedProjectName" resultType="int" parameterType="java.util.HashMap">
+        select count(*) from
+          project JOIN project_user
+            ON project.project_id = project_user.project_id
+            where project_user.user_id = #{user_id}
+            and project.project_name =#{project_name}
+    </select>
+
+    <select id="checkDuplicatedProjectKEY" resultType="int" parameterType="java.util.HashMap">
+        select count(*) from
+          project JOIN project_user
+            ON project.project_id = project_user.project_id
+            where project_user.user_id = #{user_id}
+            and project.project_key =#{project_key}
+    </select>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project_manager.UserMapper">
+    <select id="getUserList" resultType="UserDTO">
+        select * from user
+    </select>
+
+    <select id="checkUser" resultType="UserDTO" parameterType="UserDTO">
+        select * from user
+        where user_id = #{user_id}
+        AND user_password = #{user_password}
+    </select>
+</mapper>

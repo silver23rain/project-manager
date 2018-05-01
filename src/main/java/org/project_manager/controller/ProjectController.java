@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.project_manager.domain.ResultCode;
 import org.project_manager.domain.UserDTO;
+import org.project_manager.service.AuthorityService;
 import org.project_manager.service.ProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,11 +34,12 @@ public class ProjectController {
 
 	@Inject
 	ProjectService projectService;
+	@Inject
+	AuthorityService authorityService;
 
 	@RequestMapping("")
 	public String showProjectList(Model model,  HttpServletRequest request) throws JsonProcessingException {
-		HttpSession session = request.getSession();
-		UserDTO userDTO = (UserDTO) session.getAttribute("loginUser");
+		UserDTO userDTO = authorityService.getUser(request);
 
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
@@ -52,8 +54,7 @@ public class ProjectController {
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	@ResponseBody
 	public String createProject(@RequestParam("project_name") String project_name, HttpServletRequest request){
-		HttpSession session = request.getSession();
-		UserDTO userDTO = (UserDTO) session.getAttribute("loginUser");
+		UserDTO userDTO = authorityService.getUser(request);
 
 		try {
 			ResultCode createProjectResult =projectService.createProject(project_name,userDTO);

@@ -3,8 +3,10 @@ package org.project_manager.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.project_manager.domain.BacklogDTO;
-import org.project_manager.domain.ProjectDTO;
+import org.project_manager.domain.ResultCode;
 import org.project_manager.domain.UserDTO;
+import org.project_manager.service.AuthorityService;
+import org.project_manager.service.BacklogService;
 import org.project_manager.service.ProjectService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 
@@ -24,25 +25,39 @@ import java.util.List;
 public class BacklogController {
 	@Inject
 	ProjectService projectService;
+	@Inject
+	AuthorityService authorityService;
+	@Inject
+	BacklogService backlogService;
+
 	private static ObjectMapper objectMapper = new ObjectMapper();
 
 	@RequestMapping(value = "")
 	public String backlogList(Model model, HttpServletRequest request, @RequestParam("project_id") Integer project_id) throws JsonProcessingException {
-		HttpSession session = request.getSession();
-		UserDTO userDTO = (UserDTO) session.getAttribute("loginUser");
+		UserDTO userDTO = authorityService.getUser(request);
 
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
-		ProjectDTO projectDTO = new ProjectDTO();
-		projectDTO.setProject_id(project_id);
+		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(project_id);
 
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
+		model.addAttribute("backLogList", objectMapper.writeValueAsString(backlogList));
 		model.addAttribute("selectedProjectId", project_id);
+
 		return "/project/backlog";
 	}
 
 	@RequestMapping(value = "/create" , method = RequestMethod.POST)
 	@ResponseBody
-	public void createBacklog (HttpServletRequest request, BacklogDTO  backlogDTO){
-		//TODO
+	public String createBacklog (HttpServletRequest request, BacklogDTO  backlogDTO){
+		UserDTO userDTO = authorityService.getUser(request);
+		backlogDTO.setBl_writer(userDTO.getUser_id());
+		try {
+			backlogService.createBacklog(backlogDTO);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResultCode.INSERT_ERROR.toJSON();
+
+		}
+		return ResultCode.SUCCESS.toJSON();
 	}
 }

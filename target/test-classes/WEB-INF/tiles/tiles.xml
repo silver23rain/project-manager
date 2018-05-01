@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name ="base" template="/WEB-INF/tiles/layout/main_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/tiles/tile/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/tiles/tile/main_menu.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/tile/footer.jsp"/>
+    </definition>
+
+    <definition name ="dynamic_menu" template="/WEB-INF/tiles/layout/project_menu_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/tiles/tile/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/tiles/tile/project_menu.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/tile/footer.jsp"/>
+    </definition>
+
+    <definition name="headerOnlyLayout" template="/WEB-INF/tiles/layout/header_only_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/tiles/tile/header.jsp"/>
+    </definition>
+
+    <definition name ="/*" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/{1}.jsp"/>
+    </definition>
+
+    <definition name ="/user/login" template="/WEB-INF/tiles/layout/empty_layout.jsp">
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
+    </definition>
+
+    <definition name="/project/project_create" extends="headerOnlyLayout">
+        <put-attribute name="body" value="/WEB-INF/views/project/project_create.jsp"/>
+    </definition>
+
+    <definition name ="/project/*" extends="dynamic_menu">
+        <put-attribute name="body" value="/WEB-INF/views/project/{1}.jsp"/>
+    </definition>
+
+</tiles-definitions>

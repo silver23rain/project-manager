@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project_manager.BackLogMapper">
+    <select id="getMaxBacklogNo" resultType="Integer">
+        select max(bl_no)
+        from backlog
+        where project_id = #{project_id}
+    </select>
+
+    <insert id="createBacklog" parameterType="BacklogDTO">
+        insert into backlog(bl_no, project_id, bl_title, bl_content, bl_writer, assigned_user)
+        values (#{bl_no}, #{project_id}, #{bl_title}, #{bl_content}, #{bl_writer}, #{assigned_user})
+    </insert>
+
+    <select id="getBackLogList" resultType="java.util.HashMap">
+       select bl_no, bl_title, bl_writer, story_point, project_key, backlog_status.bl_status
+      from backlog join project
+      on backlog.project_id = project.project_id
+      left join backlog_status
+      on backlog.status_id = backlog_status.status_id
+      where backlog.project_id = #{project_id}
+    </select>
+</mapper>
