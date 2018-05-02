@@ -8,6 +8,7 @@ import org.project_manager.domain.UserDTO;
 import org.project_manager.service.AuthorityService;
 import org.project_manager.service.BacklogService;
 import org.project_manager.service.ProjectService;
+import org.project_manager.service.SprintService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,8 @@ public class BacklogController {
 	AuthorityService authorityService;
 	@Inject
 	BacklogService backlogService;
+	@Inject
+	SprintService sprintService;
 
 	private static ObjectMapper objectMapper = new ObjectMapper();
 
@@ -38,9 +41,12 @@ public class BacklogController {
 
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
 		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(project_id);
+		List<HashMap<String, Object>> sprintList = sprintService.getSprintList(project_id);
 
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
 		model.addAttribute("backLogList", objectMapper.writeValueAsString(backlogList));
+		model.addAttribute("sprintList" , objectMapper.writeValueAsString(sprintList));
+
 		model.addAttribute("selectedProjectId", project_id);
 
 		return "/project/backlog";

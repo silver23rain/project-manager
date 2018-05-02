@@ -27,6 +27,7 @@
 	<script src="/resources/js/jquery.sparkline.js"></script>
 	<script src="/resources/js/common/util.js"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>
 	<div id="main_body">

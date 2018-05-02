@@ -2,8 +2,6 @@ package org.project_manager.domain;
 
 public class ProjectDTO {
 	private int project_id;
-
-
 	private String project_name;
 	private String project_key;
 	private String project_content;

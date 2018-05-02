@@ -36,4 +36,8 @@ public class ProjectDAO {
 		return sqlSession.selectOne(namespace + ".checkDuplicatedProjectKEY", objectHashMap);
 	}
 
+	public String getProjectName(int project_id){
+		return sqlSession.selectOne(namespace + ".getProjectName", project_id);
+	}
+
 }

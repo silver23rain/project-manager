@@ -958,6 +958,7 @@ img {
 }
 .img-circle {
   border-radius: 50%;
+  background: #ffd777;
 }
 hr {
   margin-top: 20px;

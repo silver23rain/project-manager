@@ -12,7 +12,6 @@ public class UserDAO {
 
 	@Inject
 	private SqlSession sqlSession ;
-
 	private static final String namespace= "org.project_manager.UserMapper";
 
 	public List<UserDTO> getUserList(){

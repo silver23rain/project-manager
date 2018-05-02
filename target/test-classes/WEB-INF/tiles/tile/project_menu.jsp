@@ -5,9 +5,9 @@
 		<!-- sidebar menu start-->
 		<ul class="sidebar-menu" id="nav-accordion">
 			<div id="user_info">
-				<p class="centered"><a href="profile.html"><img src="/resources/img/ui-sam.jpg" class="img-circle"
+				<p class="centered"><a href="profile.html"><img src="/resources/img/user/002-boy-5.png" class="img-circle"
 				                                                width="60"></a></p>
-				<h5 class="centered">Marcel Newman</h5>
+				<h5 class="centered"> <c:out value="${loginUser.user_id}"/></h5>
 			</div>
 			<div id="menu">
 
@@ -22,7 +22,7 @@
 <script>
 	var $xmlData = document.getElementById("projectListXmlData");
 	var projectList = JSON.parse($xmlData.getAttribute("data-projectList"));
-	Project.Data.projectId = "<c:out value="${selectedProjectId}"/>";
+	Project.Data.projectId = <c:out value="${selectedProjectId}"/>;
 
 	$(function() {
 		initMenuTemplate();
@@ -32,11 +32,11 @@
 	var focusSelected = function() {
 		$(".sub-menu > a").removeClass("active");
 		$(".sub-menu > a").each(function(index, item) {
-			if($(item).attr("project-id") === Project.Data.projectId) {
+			if($(item).attr("project-id") == Project.Data.projectId) {
 				$(this).addClass("active");
 			}
 		})
-		$("a .active").siblings().find('li').addClass("active");
+		// $("a .active").siblings().find('li').addClass("active");
 		// console.log($("a .active"));
 
 	};

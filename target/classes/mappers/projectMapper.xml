@@ -47,5 +47,10 @@
             where project_user.user_id = #{user_id}
             and project.project_key =#{project_key}
     </select>
+    <select id="getProjectName" resultType="String">
+        select project_name
+        from project
+        where project_id = #{project_id}
+    </select>
 
 </mapper>
