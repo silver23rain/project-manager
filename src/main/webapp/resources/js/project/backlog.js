@@ -20,10 +20,6 @@ var showModal = function(result) {
 };
 var BackLog = {
 	init: function(backLogList) {
-		$(".sortable").sortable({
-			items: "li",
-			connectWith: '.sortable'
-		});
 		if(backLogList.length === 0 || backLogList === undefined) {
 			var $li = "<li class='text-center'>생성된 백로그가 없습니다.</li>";
 			$("#backlog_list").append($li);
@@ -45,38 +41,51 @@ var BackLog = {
 		$("#sprint_main").append(html);
 	},
 	bindEvents: function() {
+		var currentKey;
+		var newKey;
 		$(".sortable").sortable({
+            items: "li",
+            connectWith: '.sortable',
 			group:'.sortable',
-			pullPlaceholder: false,
-			// animation on drop
-			onDrop: function  ($item, container, _super) {
-				var $clonedItem = $('<li/>').css({height: 0});
-				$item.before($clonedItem);
-				$clonedItem.animate({'height': $item.height()});
-
-				$item.animate($clonedItem.position(), function  () {
-					$clonedItem.detach();
-					_super($item, container);
-				});
-			},
-
-			// set $item relative to cursor position
-			onDragStart: function ($item, container, _super) {
-				var offset = $item.offset(),
-					pointer = container.rootGroup.pointer;
-
-				adjustment = {
-					left: pointer.left - offset.left,
-					top: pointer.top - offset.top
+			start:function ( event, ui) {
+                currentKey={
+                	sprint_year: $(event.target).attr("sprint-year"),
+					sprint_no: $(event.target).attr("sprint-no")
+				}
+            },
+            receive: function( event, ui ) {
+            	newKey={
+                    sprint_year: $(event.target).attr("sprint-year"),
+                    sprint_no: $(event.target).attr("sprint-no")
 				};
-
-				_super($item, container);
-			},
-			onDrag: function ($item, position) {
-				$item.css({
-					left: position.left - adjustment.left,
-					top: position.top - adjustment.top
-				});
+            	console.log(newKey);
+            	console.log(currentKey)
+            	var data ={
+                    current_year: currentKey.sprint_year === undefined ?null:currentKey.sprint_year,
+                    current_no: currentKey.sprint_no === undefined?null:currentKey.sprint_no,
+                    new_year: newKey.sprint_year=== undefined?null:newKey.sprint_year,
+                    new_no: newKey.sprint_no=== undefined?null:newKey.sprint_no,
+                    project_id:Project.Data.projectId
+                };
+            	console.log(data);
+               $.ajax({
+				   url:"/project/backlog/includeSprint",
+				   method:"POST",
+				   dataType:"json",
+				   data:{
+                       current_year: currentKey.sprint_year === undefined ?null:currentKey.sprint_year,
+                       current_no: currentKey.sprint_no === undefined?null:currentKey.sprint_no,
+                       new_year: newKey.sprint_year=== undefined?null:newKey.sprint_year,
+                       new_no: newKey.sprint_no=== undefined?null:newKey.sprint_no,
+                       project_id:Project.Data.projectId
+				   },
+				   success:function (result) {
+					   console.log(result);
+                   },
+				   error:function(result){
+				   		console.log(result);
+				   }
+			   })
 			}
 		});
 		$(".sortable").disableSelection();

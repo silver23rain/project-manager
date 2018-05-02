@@ -22,5 +22,10 @@
       left join backlog_status
       on backlog.status_id = backlog_status.status_id
       where backlog.project_id = #{project_id}
+      and sprint_no is null
     </select>
+
+    <update id="includeSprint" parameterType="java.util.HashMap">
+        /*TODO : backlog 테이블 업데이트*/
+    </update>
 </mapper>

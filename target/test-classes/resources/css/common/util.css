@@ -4,6 +4,7 @@
 .alert-div .alert-danger{
     margin-top: 3px;
     padding: 3px;
+    display: none;
 }
 
 .empty_row {

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="org.project_manager.SprintMapper">
+    <select id="getNewSprintTitle" resultType="java.util.HashMap">
+        select sprint_year, max(sprint_no) + 1 as sprint_no
+        from sprint left join project
+        on sprint.project_id = project.project_id
+        where sprint_year = YEAR(now())
+        and sprint.project_id = #{project_id}
+    </select>
+
+    <insert id="createSprint" parameterType="SprintDTO">
+        INSERT INTO sprint(sprint_year, sprint_no, sprint_goal, project_id)
+        VALUES (#{sprint_year},#{sprint_no},#{sprint_goal}, #{project_id})
+    </insert>
+
+    <select id="getSprintList" resultType="java.util.HashMap">
+        select sprint_year, sprint_no,sprint_status ,project_name
+        from sprint left join project
+        on sprint.project_id = project.project_id
+        where sprint.project_id = #{project_id}
+    </select>
+</mapper>

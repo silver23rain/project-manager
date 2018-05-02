@@ -54,6 +54,7 @@
             <mvc:mapping path="/"/>
             <mvc:mapping path="/*"/>
             <mvc:mapping path="/project"/>
+            <mvc:mapping path="/project/**"/>
             <bean class="org.project_manager.interceptor.LoggingInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

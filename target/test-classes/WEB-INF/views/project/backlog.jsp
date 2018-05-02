@@ -8,6 +8,10 @@
 		display: inline;
 		margin-left: 20px;
 	}
+	.hidden-li{
+		height: 4px;!important;
+		opacity: 0;
+	}
 </style>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="/resources/js/project/backlog.js"></script>
@@ -27,7 +31,7 @@
 						<div class="panel-body">
 							<div class="task-content">
 								<ul class="task-list sortable" id="backlog_list">
-									<li></li>
+									<li class="hidden-li"></li>
 								</ul>
 							</div>
 							<div class="add-baklog-row">
@@ -36,7 +40,7 @@
 									       class="form-control">
 									<div class="alert-div">
 										<div class="alert-danger" id="backlog_name_alert"
-										     style="display: none"></div>
+										     ></div>
 									</div>
 								</div>
 								<div class="col-sm-2">
@@ -111,8 +115,8 @@
 			<section class="task-panel tasks-widget">
 				<div class="panel-body collapse">
 					<div class="task-content">
-						<ul class="task-list sortable" class="sprint_list">
-							<li style="height: 0px"></li>
+						<ul class="task-list sortable" class="sprint_list" sprint-year="{{sprint_year}}" sprint-no="{{sprint_no}}">
+							<li class="hidden-li"></li>
 						</ul>
 					</div>
 				</div>

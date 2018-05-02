@@ -26,4 +26,8 @@ public class BacklogDAO {
         return sqlSession.selectList(namespace+".getBackLogList",project_id);
     }
 
+    public void includeSprint(HashMap<String,Object> sprintMap) throws Exception{
+        sqlSession.update(namespace+".includeSprint",sprintMap);
+    }
+
 }
