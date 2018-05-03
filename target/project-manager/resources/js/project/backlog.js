@@ -19,6 +19,9 @@ var showModal = function(result) {
 	$simpleModal.modal('show');
 };
 var BackLog = {
+    /*TODO : 백로그 목록에서는 sprint에 들어 있는것도 포함한다.*/
+    //단, sprint 키가  null 인경우에는 해당 sprint panel을 찾아 insert하고,
+    //null인경우에만 백로그 목록에 추가 한다.
 	init: function(backLogList) {
 		if(backLogList.length === 0 || backLogList === undefined) {
 			$(".sortable").sortable({
