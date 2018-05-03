@@ -27,8 +27,8 @@ public class BacklogService {
         backLogDAO.createBacklog(backlogDTO);
 
     }
-    public void includeSprint(HashMap<String,Object> sprintMap) throws Exception {
-        backLogDAO.includeSprint(sprintMap);
+    public void updateBacklog(BacklogDTO backlogDTO) throws Exception {
+        backLogDAO.updateBacklog(backlogDTO);
     }
 
 }

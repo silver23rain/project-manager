@@ -25,7 +25,18 @@
       and sprint_no is null
     </select>
 
-    <update id="includeSprint" parameterType="java.util.HashMap">
-        /*TODO : backlog 테이블 업데이트*/
+    <update id="updateBacklog">
+        update backlog
+        <choose>
+            <when test="bl_title== null">
+                set sprint_no = #{sprint_no}, sprint_year = #{sprint_year}
+            </when>
+            <otherwise>
+                set bl_title = #{bl_title},bl_content = #{bl_content},assigned_user = #{assigned_user},story_point =
+                #{story_point},status_id = #{status_id}
+            </otherwise>
+        </choose>
+        where project_id = #{project_id}
+        and bl_no = #{bl_no}
     </update>
 </mapper>

@@ -21,9 +21,11 @@ var showModal = function(result) {
 var BackLog = {
 	init: function(backLogList) {
 		if(backLogList.length === 0 || backLogList === undefined) {
+			$(".sortable").sortable({
+				disabled:true
+			})
 			var $li = "<li class='text-center'>생성된 백로그가 없습니다.</li>";
 			$("#backlog_list").append($li);
-
 		}
 	},
 	initBacklogTemplate: function() {
@@ -41,49 +43,20 @@ var BackLog = {
 		$("#sprint_main").append(html);
 	},
 	bindEvents: function() {
-		var currentKey;
-		var newKey;
 		$(".sortable").sortable({
             items: "li",
             connectWith: '.sortable',
 			group:'.sortable',
-			start:function ( event, ui) {
-                currentKey={
-                	sprint_year: $(event.target).attr("sprint-year"),
-					sprint_no: $(event.target).attr("sprint-no")
-				}
-            },
             receive: function( event, ui ) {
-            	newKey={
-                    sprint_year: $(event.target).attr("sprint-year"),
-                    sprint_no: $(event.target).attr("sprint-no")
-				};
-            	console.log(newKey);
-            	console.log(currentKey)
-            	var data ={
-                    current_year: currentKey.sprint_year === undefined ?null:currentKey.sprint_year,
-                    current_no: currentKey.sprint_no === undefined?null:currentKey.sprint_no,
-                    new_year: newKey.sprint_year=== undefined?null:newKey.sprint_year,
-                    new_no: newKey.sprint_no=== undefined?null:newKey.sprint_no,
-                    project_id:Project.Data.projectId
-                };
-            	console.log(data);
                $.ajax({
-				   url:"/project/backlog/includeSprint",
+				   url:"/project/backlog/updateBacklog",
 				   method:"POST",
 				   dataType:"json",
 				   data:{
-                       current_year: currentKey.sprint_year === undefined ?null:currentKey.sprint_year,
-                       current_no: currentKey.sprint_no === undefined?null:currentKey.sprint_no,
-                       new_year: newKey.sprint_year=== undefined?null:newKey.sprint_year,
-                       new_no: newKey.sprint_no=== undefined?null:newKey.sprint_no,
-                       project_id:Project.Data.projectId
-				   },
-				   success:function (result) {
-					   console.log(result);
-                   },
-				   error:function(result){
-				   		console.log(result);
+					   sprint_year: $(event.target).attr("sprint-year"),
+					   sprint_no: $(event.target).attr("sprint-no"),
+                       project_id:Project.Data.projectId,
+					   bl_no : $(this).find('a').attr("bl-no")
 				   }
 			   })
 			}

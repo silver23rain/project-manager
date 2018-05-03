@@ -22,13 +22,21 @@
       left join backlog_status
       on backlog.status_id = backlog_status.status_id
       where backlog.project_id = #{project_id}
+      and sprint_no is null
     </select>
 
-    <update id="includeSprint" parameterType="java.util.HashMap">
-        UPDATE sprint
-        SET sprint_no=#{new_no},sprint_year=#{new_year}
-        WHERE  sprint_year=#{current_year}
-        AND sprint_no=#{current_no}
-        AND project_id=#{project_id}
+    <update id="updateBacklog">
+        update backlog
+        <choose>
+            <when test="bl_title== null">
+                set sprint_no = #{sprint_no}, sprint_year = #{sprint_year}
+            </when>
+            <otherwise>
+                set bl_title = #{bl_title},bl_content = #{bl_content},assigned_user = #{assigned_user},story_point =
+                #{story_point},status_id = #{status_id}
+            </otherwise>
+        </choose>
+        where project_id = #{project_id}
+        and bl_no = #{bl_no}
     </update>
 </mapper>

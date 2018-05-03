@@ -67,22 +67,11 @@ public class BacklogController {
 		return ResultCode.SUCCESS.toJSON();
 	}
 
-	@RequestMapping(value = "/includeSprint", method = RequestMethod.POST)
+	@RequestMapping(value = "/updateBacklog", method = RequestMethod.POST)
 	@ResponseBody
-	public String includeSprint (@RequestParam("project_id") int project_id,
-								 @RequestParam("new_year") String new_year,
-								 @RequestParam("new_no") Integer new_no,
-								 @RequestParam("current_year")String current_year,
-								 @RequestParam("current_no") Integer current_no){
-		HashMap<String,Object> sprintMap = new HashMap<>();
-		sprintMap.put("project_id",project_id);
-		sprintMap.put("new_year",new_year);
-		sprintMap.put("new_no",new_no);
-		sprintMap.put("current_year",current_year);
-		sprintMap.put("current_no",current_no);
-
+	public String includeSprint (BacklogDTO backlogDTO){
 		try {
-			backlogService.includeSprint(sprintMap);
+			backlogService.updateBacklog(backlogDTO);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ResultCode.UPDATE_ERROR.toJSON();
