@@ -30,7 +30,6 @@
 		<script src="/resources/js/jquery-1.11.1.js"></script>
 		<script src="/resources/js/jquery-1.11.1.min.js"></script>
 		<script src="/resources/js/bootstrap.min.js"></script>
-		<script src="/resources/js/common/util.js"></script>
 		<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
 		<script src="/resources/js/jquery.scrollTo.min.js"></script>
 

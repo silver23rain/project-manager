@@ -5,7 +5,7 @@ Project.Data= {
 };
 
 Project.Util.alertText= function (div, message) {
-	div.css("display","");
+	div.css("display","block");
 	div.html(message);
 	return div;
 };

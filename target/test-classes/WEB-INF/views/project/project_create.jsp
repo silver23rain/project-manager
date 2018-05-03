@@ -51,14 +51,14 @@
 				<p>프로젝트 명</p>
 				<input type="text" id="project_name" placeholder="프로젝트 명을 입력해주세요.(영어만 가능)" autofocus="autofocus">
 				<div  class ="alert-div">
-					<div class="alert-danger alert-sm" id="project_name_alert" sty></div>
+					<div class="alert-danger alert-sm" id="project_name_alert"></div>
 				</div>
 				<button class="btn btn-primary btn-sm" id="create_btn">생성</button>
 			</div>
 		</div>
 	</section>
 </section>
-
+<script  src="/resources/js/common/util.js"></script>
 <script type="text/javascript" src="/resources/js/project/project_create.js"></script>
 <script>
 	$(function () {

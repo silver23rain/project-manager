@@ -63,6 +63,7 @@
 
 	</div>
 </div>
+<script src="/resources/js/common/util.js"></script>
 <script type="text/javascript" src="/resources/js/user/login.js"></script>
 <script>
 	$(function() {

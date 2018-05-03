@@ -34,10 +34,7 @@ var bindEvents = function () {
 					}else if(result.code ==="DUPLICATED_NAME"){
 						Project.Util.alertText($("#project_name_alert"),"해당 프로젝트명이 존재합니다.");
 					}
-				},error : function (result) {
-
 				}
-
 			})
 		}
 	});

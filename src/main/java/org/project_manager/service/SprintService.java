@@ -24,22 +24,23 @@ public class SprintService {
 			GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			sprintMap.put("sprint_no", 1);
 			sprintMap.put("sprint_year", gregorianCalendar.get(Calendar.YEAR));
+		} else {
+			Date dataYear = (Date) sprintMap.get("sprint_year");
+			sprintMap.put("sprint_year", new SimpleDateFormat("yyyy").format(dataYear));
 		}
-		Date dataYear = (Date) sprintMap.get("sprint_year");
-		sprintMap.put("sprint_year",new SimpleDateFormat("yyyy").format(dataYear));
 		sprintMap.put("project_name", projectDAO.getProjectName(project_id));
 		return sprintMap;
 	}
 
-	public void createSprint (SprintDTO sprintDTO) throws Exception {
+	public void createSprint(SprintDTO sprintDTO) throws Exception {
 		sprintDAO.createSprint(sprintDTO);
 	}
 
-	public List<HashMap<String,Object>> getSprintList(int project_id){
-		List<HashMap<String,Object>> sprintList = sprintDAO.getSprintList(project_id);
-		for(HashMap <String,Object> hashMap:sprintList) {
+	public List<HashMap<String, Object>> getSprintList(int project_id) {
+		List<HashMap<String, Object>> sprintList = sprintDAO.getSprintList(project_id);
+		for(HashMap<String, Object> hashMap : sprintList) {
 			Date dataYear = (Date) hashMap.get("sprint_year");
-			hashMap.put("sprint_year",new SimpleDateFormat("yyyy").format(dataYear));
+			hashMap.put("sprint_year", new SimpleDateFormat("yyyy").format(dataYear));
 		}
 		return sprintList;
 	}

@@ -40,21 +40,20 @@ var bindEvents = function () {
 	});
 	var validationId = function (user_id) {
 		if (user_id.length === 0) {
-			$("#user_id_alert").html("아이디를 입력하세요.");
+			Project.Util.alertText($("#user_id_alert"), "아이디를 입력하세요.");
 			return false;
 		}
-
+		$("#user_id_alert").css("display","none");
 		$("#user_id_alert").html("");
-
 		return true;
 	}
 
 	var validationPassword = function (user_password) {
 		if (user_password.length === 0) {
-			$("#user_pw_alert").html("비밀번호를 입력하세요");
+			Project.Util.alertText($("#user_pw_alert"), "비밀번호를 입력하세요");
 			return false;
 		}
-
+		$("#user_pw_alert").css("display","none");
 		$("#user_pw_alert").html("");
 		return true;
 	}
