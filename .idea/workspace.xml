@@ -7,41 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2221b30f-8ef6-4140-8078-f317bc6a1928" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/datepickk.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/datepickk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project_manager/controller/BacklogController.java" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/controller/BacklogController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project_manager/domain/SprintDTO.java" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/domain/SprintDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/SprintDAO.java" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/SprintDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project_manager/service/SprintService.java" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/service/SprintService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/zabuto_calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/project_manager/controller/BacklogController.class" afterPath="$PROJECT_DIR$/target/classes/org/project_manager/controller/BacklogController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/project_manager/domain/SprintDTO.class" afterPath="$PROJECT_DIR$/target/classes/org/project_manager/domain/SprintDTO.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/project_manager/persistence/SprintDAO.class" afterPath="$PROJECT_DIR$/target/classes/org/project_manager/persistence/SprintDAO.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/project_manager/service/SprintService.class" afterPath="$PROJECT_DIR$/target/classes/org/project_manager/service/SprintService.class" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/project-manager/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/controller/BacklogController.class" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/controller/BacklogController.class" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/domain/SprintDTO.class" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/domain/SprintDTO.class" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/persistence/SprintDAO.class" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/persistence/SprintDAO.class" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/service/SprintService.class" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/org/project_manager/service/SprintService.class" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/css/zabuto_calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/common/util.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/common/util.js" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/css/zabuto_calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/common/util.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/common/util.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,8 +44,8 @@
       <file leaf-file-name="sprint.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="475">
+              <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -872,7 +838,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90350000" />
+    <option name="totallyTimeSpent" value="90968000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1411,8 +1377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="475">
+          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
           <folding />
         </state>
       </provider>

@@ -1,32 +1,32 @@
 var Sprint = {
-	sprint_year : "",
-	sprint_no :"" ,
-	start_date:"",
-	end_date:"",
-	sprint_goal:"",
-	init:function() {
+	sprint_year: "",
+	sprint_no: "",
+	start_date: "",
+	end_date: "",
+	sprint_goal: "",
+	init: function() {
 		Sprint.Modal.bindEvents();
 	},
-	getData :function() {
+	getData: function() {
 		return {
-			sprint_year : "",
-			sprint_no :"" ,
-			start_date:"",
-			end_date:"",
-			sprint_goal:"",
+			sprint_year: "",
+			sprint_no: "",
+			start_date: "",
+			end_date: "",
+			sprint_goal: "",
 
 		}
 	}
 };
-Sprint.Modal ={
+Sprint.Modal = {
 	bindEvents: function() {
-		$(".modal-body").on("click",$("#sprint_start_btn"),function() {
+		$(".modal-body").on("click", $("#sprint_start_btn"), function() {
 			$("#sprint_start_btn").addClass("btn-info");
 			Calendar.showDatePicker();
 
 		});
 	},
-	showOpenSprintModal : function(result) {
+	showOpenSprintModal: function(result) {
 		var $simpleModal = $('#simple_modal');
 		$simpleModal.find('#myModalLabel').html("스프린트 시작하기");
 		var $modalBody = $simpleModal.find('.modal-body');
@@ -51,7 +51,7 @@ Sprint.Modal ={
 		$("#modal_submit").text("스프린트 시작");
 		$simpleModal.modal('show');
 	},
-	showNewSprintModal : function(result) {
+	showNewSprintModal: function(result) {
 		var $simpleModal = $('#simple_modal');
 		$simpleModal.find('#myModalLabel').html("스프린트 생성");
 		var $modalBody = $simpleModal.find('.modal-body');
@@ -73,40 +73,39 @@ Sprint.Modal ={
 	}
 };
 var Calendar = {
-	datepicker : null,
-	showDatePicker : function() {
-		if(Calendar.getDataPicker()){
-			if(Calendar.getSelectDates().length === 2){
-				this.datepicker.unselectAll();
-			}
-			return;
+	datepicker: null,
+	showDatePicker: function() {
+		if(!Calendar.getDataPicker()) {
+			this.datepicker = new Datepickk();
+			this.datepicker.lang = "ko";
+			this.datepicker.range = true;
+			this.datepicker.maxSelections = 2;
 		}
-		this.datepicker = new Datepickk();
-		this.datepicker.lang = "ko";
-		this.datepicker.range = true;
-		this.datepicker.maxSelections = 2;
+		if(Calendar.getSelectDates().length === 2) {
+			this.datepicker.unselectAll();
+		}
 		this.datepicker.container = document.querySelector('#sprint_date');
 		this.datepicker.show();
 		Calendar.bindEvents();
 	},
-	bindEvents:function() {
-		this.datepicker.onSelect = function(checked){
+	bindEvents: function() {
+		this.datepicker.onSelect = function(checked) {
 			var selectedDates = Calendar.getSelectDates();
 
-			if(selectedDates.length === 1 ){
+			if(selectedDates.length === 1) {
 				$("#sprint_end_btn").removeAttr("disabled");
 				$("#sprint_end_btn").addClass("btn-info");
-			}else if(selectedDates.length === 2 ){
+			} else if(selectedDates.length === 2) {
 				$("#sprint_date").find("button").removeClass("btn-info");
-				$("#sprint_end_btn").attr("disabled","disabled");
+				$("#sprint_end_btn").attr("disabled", "disabled");
 			}
 			console.log(Calendar.datepicker.selectedDates);
 		};
 	},
-	getDataPicker : function() {
+	getDataPicker: function() {
 		return this.datepicker;
 	},
-	getSelectDates : function() {
+	getSelectDates: function() {
 		return Calendar.datepicker.selectedDates;
 	}
 };
