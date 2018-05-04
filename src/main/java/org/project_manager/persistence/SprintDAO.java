@@ -22,7 +22,7 @@ public class SprintDAO {
 		sqlSession.insert(namespace+".createSprint", sprintDTO);
 	}
 
-	public List<HashMap<String,Object>> getSprintList(int project_id){
-		return sqlSession.selectList(namespace+".getSprintList",project_id);
+	public List<HashMap<String,Object>> getSprintNameList(int project_id){
+		return sqlSession.selectList(namespace+".getSprintNameList",project_id);
 	}
 }

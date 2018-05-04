@@ -6,7 +6,6 @@ import org.project_manager.persistence.SprintDAO;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
@@ -24,9 +23,6 @@ public class SprintService {
 			GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			sprintMap.put("sprint_no", 1);
 			sprintMap.put("sprint_year", gregorianCalendar.get(Calendar.YEAR));
-		} else {
-			Date dataYear = (Date) sprintMap.get("sprint_year");
-			sprintMap.put("sprint_year", new SimpleDateFormat("yyyy").format(dataYear));
 		}
 		sprintMap.put("project_name", projectDAO.getProjectName(project_id));
 		return sprintMap;
@@ -36,12 +32,8 @@ public class SprintService {
 		sprintDAO.createSprint(sprintDTO);
 	}
 
-	public List<HashMap<String, Object>> getSprintList(int project_id) {
-		List<HashMap<String, Object>> sprintList = sprintDAO.getSprintList(project_id);
-		for(HashMap<String, Object> hashMap : sprintList) {
-			Date dataYear = (Date) hashMap.get("sprint_year");
-			hashMap.put("sprint_year", new SimpleDateFormat("yyyy").format(dataYear));
-		}
+	public List<HashMap<String, Object>> getSrintNameList(int project_id) {
+		List<HashMap<String, Object>> sprintList = sprintDAO.getSprintNameList(project_id);
 		return sprintList;
 	}
 }

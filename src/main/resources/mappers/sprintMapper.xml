@@ -17,7 +17,7 @@
         VALUES (#{sprint_year},#{sprint_no},#{sprint_goal}, #{project_id})
     </insert>
 
-    <select id="getSprintList" resultType="java.util.HashMap">
+    <select id="getSprintNameList" resultType="java.util.HashMap">
         select sprint_year, sprint_no,sprint_status ,project_name
         from sprint left join project
         on sprint.project_id = project.project_id

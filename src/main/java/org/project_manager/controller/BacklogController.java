@@ -41,11 +41,11 @@ public class BacklogController {
 
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
 		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(project_id);
-		List<HashMap<String, Object>> sprintList = sprintService.getSprintList(project_id);
+		List<HashMap<String, Object>> sprintList = sprintService.getSrintNameList(project_id);
 
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
 		model.addAttribute("backLogList", objectMapper.writeValueAsString(backlogList));
-		model.addAttribute("sprintList" , objectMapper.writeValueAsString(sprintList));
+		model.addAttribute("sprintNameList" , objectMapper.writeValueAsString(sprintList));
 
 		model.addAttribute("selectedProjectId", project_id);
 

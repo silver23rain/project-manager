@@ -1,7 +1,13 @@
 Project = window.Project || {};
 Project.Util = Project.Util || {};
 Project.Data= {
-	projectId:""
+	projectId:"",
+	isEmpty:function(data) {
+		if(data === null || data === undefined){
+			return true;
+		}
+		return false;
+	}
 };
 
 Project.Util.alertText= function (div, message) {
@@ -22,3 +28,4 @@ Project.Util.alertBanner = function ($target, message) {
 
     return $alert
 };
+

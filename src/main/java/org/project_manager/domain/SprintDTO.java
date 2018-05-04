@@ -4,7 +4,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 public class SprintDTO {
-	private String sprint_year;
+	private Integer sprint_year;
 	private Integer sprint_no;
 	private Timestamp start_date;
 	private Timestamp end_date;
@@ -20,11 +20,11 @@ public class SprintDTO {
 		this.sprint_goal = sprint_goal;
 	}
 
-	public String getSprint_year() {
+	public Integer getSprint_year() {
 		return sprint_year;
 	}
 
-	public void setSprint_year(String sprint_year) {
+	public void setSprint_year(Integer sprint_year) {
 		this.sprint_year = sprint_year;
 	}
 

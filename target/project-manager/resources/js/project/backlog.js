@@ -1,48 +1,40 @@
-var showModal = function(result) {
-	var $simpleModal = $('#simple_modal');
-	$simpleModal.find('#myModalLabel').html("스프린트 생성");
-	var $modalBody = $simpleModal.find('.modal-body');
-	$modalBody.empty();
-
-	var $formData = '<div class ="form-group">';
-	$formData += '<h5>스프린트명</h5>';
-	$formData += '<input type="text" disabled="disabled" id="sprint_name" class="form-control">';
-	$formData += '<h5>스프린트 목표</h5>';
-	$formData += '<textarea id="sprint_goal"  class="form-control">';
-	$modalBody.append($formData);
-
-	$("#sprint_name").attr("sprint-year", result.sprint_year);
-	$("#sprint_name").attr("sprint-no", result.sprint_no);
-	$("#sprint_name").val(result.project_name + '_' + result.sprint_year + '-' + result.sprint_no);
-
-	$("#modal_submit").text("생성하기");
-	$simpleModal.modal('show');
-};
 var BackLog = {
-    /*TODO : 백로그 목록에서는 sprint에 들어 있는것도 포함한다.*/
-    //단, sprint 키가  null 인경우에는 해당 sprint panel을 찾아 insert하고,
-    //null인경우에만 백로그 목록에 추가 한다.
-	init: function(backLogList) {
-		if(backLogList.length === 0 || backLogList === undefined) {
-			$(".sortable").sortable({
-				disabled:true
-			})
-			var $li = "<li class='text-center'>생성된 백로그가 없습니다.</li>";
+	init: function() {
+		this.includeSprintBacklog();
+		this.checkisEmptyExcludeSprintBacklogList();
+		$(".sprint-list").each(function () {
+			if($(this).find("li.backlog-list").length !== 0){
+				$(this).parent().parent().addClass("in");
+			}
+		})
+	},
+	includeSprintBacklog: function() {
+		$.each(backLogList, function(index, item) {
+			if(!Project.Data.isEmpty(item.sprint_year) && !Project.Data.isEmpty(item.sprint_no)) {
+				var id = item.sprint_year + '_' + item.sprint_no;
+				BackLog.initBacklogTemplate($("#" + id), item);
+			} else {
+				BackLog.initBacklogTemplate($("#backlog_list"), item);
+			}
+		})
+	},checkisEmptyExcludeSprintBacklogList: function() {
+		if($("#backlog_list li.backlog-list").length === 0 || backLogList === undefined) {
+			var $li = "<li class='text-center' id='empty_backlog'>생성된 백로그가 없습니다.</li>";
 			$("#backlog_list").append($li);
+		}else{
+			$("#empty_backlog").remove();
 		}
 	},
-	initBacklogTemplate: function() {
+	initBacklogTemplate: function($target,list) {
 		var source = $("#backlogListTemplate").html();
 		var template = Handlebars.compile(source);
-		var html = template(backLogList);
-
-		$("#backlog_list").append(html);
+		var html = template(list);
+		$target.append(html);
 	},
 	initSprintTemplate: function() {
 		var source = $("#sprintListTemplate").html();
 		var template = Handlebars.compile(source);
-		var html = template(sprintList);
-
+		var html = template(sprintNameList);
 		$("#sprint_main").append(html);
 	},
 	bindEvents: function() {
@@ -50,7 +42,7 @@ var BackLog = {
             items: "li",
             connectWith: '.sortable',
 			group:'.sortable',
-            receive: function( event, ui ) {
+            receive: function(event) {
                $.ajax({
 				   url:"/project/backlog/updateBacklog",
 				   method:"POST",
@@ -59,7 +51,10 @@ var BackLog = {
 					   sprint_year: $(event.target).attr("sprint-year"),
 					   sprint_no: $(event.target).attr("sprint-no"),
                        project_id:Project.Data.projectId,
-					   bl_no : $(this).find('a').attr("bl-no")
+					   bl_no : $(event.toElement).find('a').attr("bl-no")
+				   },
+				   success: function() {
+					   BackLog.checkisEmptyExcludeSprintBacklogList();
 				   }
 			   })
 			}
@@ -102,7 +97,7 @@ var BackLog = {
 					project_id: Project.Data.projectId
 				},
 				success: function(result) {
-					showModal(result);
+					Sprint.Modal.showNewSprintModal(result);
 				}
 			});
 		});
@@ -142,5 +137,10 @@ var BackLog = {
 			}
 		});
 
+		$(".sprint-open-btn").on("click",function() {
+			Sprint.Modal.showOpenSprintModal();
+		});
+
 	}
-}
+};
+

@@ -8,18 +8,22 @@
 		display: inline;
 		margin-left: 20px;
 	}
-	.hidden-li{
-		height: 4px;!important;
+
+	.hidden-li {
+		height: 4px;
+	!important;
 		opacity: 0;
 	}
 </style>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="/resources/js/project/backlog.js"></script>
+<script src="/resources/js/project/sprint.js"></script>
 <section id="main-content">
 	<section class="wrapper">
 		<div id="sprint_main">
 		</div>
-		<div id="backlog_main" >
+		<hr>
+		<div id="backlog_main">
 			<div class="col-md-12">
 				<h3><i class="fa fa-angle-down"></i>백로그 목록
 					<button id="sprint_create_btn" class="btn btn-default btn-sm pull-right">스프린트 생성</button>
@@ -40,7 +44,7 @@
 									       class="form-control">
 									<div class="alert-div">
 										<div class="alert-danger" id="backlog_name_alert"
-										     ></div>
+										></div>
 									</div>
 								</div>
 								<div class="col-sm-2">
@@ -72,22 +76,21 @@
 </div>
 <xmldata id="backlogListXmlData"
          data-backLogList="<c:out value="${backLogList}"/>"
-         data-sprintList="<c:out value="${sprintList}"/>">
+         data-sprintNameList="<c:out value="${sprintNameList}"/>">
 </xmldata>
 <script>
 	var $xmlData = document.getElementById("backlogListXmlData");
 	var backLogList = JSON.parse($xmlData.getAttribute("data-backLogList"));
-	var sprintList = JSON.parse($xmlData.getAttribute("data-sprintList"));
+	var sprintNameList = JSON.parse($xmlData.getAttribute("data-sprintNameList"));
 	$(function() {
-		BackLog.init(backLogList, sprintList);
-		BackLog.initBacklogTemplate(backLogList);
-		BackLog.initSprintTemplate(sprintList);
+		BackLog.initSprintTemplate();
+		BackLog.init();
+		Sprint.init();
 		BackLog.bindEvents();
 	});
 </script>
 <script id="backlogListTemplate" type="text/x-handlebars-template">
-	{{#each.}}
-	<li class="list-warning">
+	<li class="list-warning backlog-list">
 		<i class=" fa  fa-angle-double-up"></i>
 		<div class="task-title">
 			<a bl-no="{{bl_no}}" class="col-md-2 col-sm-2"> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
@@ -98,29 +101,31 @@
 			</div>
 		</div>
 	</li>
-	{{/each}}
 </script>
 <script id="sprintListTemplate" type="text/x-handlebars-template">
 	{{#each.}}
-	<h3><i class="fa fa-angle-right"></i>{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}
-		<div class="status-badge">
-			<span class="badge bg-theme">0</span>
-			<span class="badge bg-primary">0</span>
-			<span class="badge bg-success">0</span>
-		</div>
-		<button class="btn btn-info btn-sm pull-right sprint-open-btn">스프린트 시작하기</button>
-	</h3>
-	<div class="row mb">
-		<div class="col-md-12">
-			<section class="task-panel tasks-widget">
-				<div class="panel-body collapse">
-					<div class="task-content">
-						<ul class="task-list sortable" class="sprint_list" sprint-year="{{sprint_year}}" sprint-no="{{sprint_no}}">
-							<li class="hidden-li"></li>
-						</ul>
+	<div>
+		<h3><i class="fa fa-angle-right"></i>{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}
+			<div class="status-badge">
+				<span class="badge bg-theme">0</span>
+				<span class="badge bg-primary">0</span>
+				<span class="badge bg-success">0</span>
+			</div>
+			<button class="btn btn-info btn-sm pull-right sprint-open-btn">스프린트 시작하기</button>
+		</h3>
+		<div class="row mb">
+			<div class="col-md-12">
+				<section class="task-panel tasks-widget">
+					<div class="panel-body collapse">
+						<div class="task-content">
+							<ul class="task-list sortable sprint-list" id="{{sprint_year}}_{{sprint_no}}"
+							    sprint-year="{{sprint_year}}" sprint-no="{{sprint_no}}">
+								<li class="hidden-li"></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 	</div>
 	{{/each}}
