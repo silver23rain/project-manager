@@ -23,4 +23,12 @@
         on sprint.project_id = project.project_id
         where sprint.project_id = #{project_id}
     </select>
+
+    <update id="updateSprint" parameterType="SprintDTO">
+      update sprint
+      set sprint_goal = #{sprint_goal}, start_date = #{start_date}, end_date = #{end_date} ,sprint_status = #{sprint_status}
+        where project_id = #{project_id}
+        and sprint_year = #{sprint_year}
+        and sprint_no = #{sprint_no}
+    </update>
 </mapper>

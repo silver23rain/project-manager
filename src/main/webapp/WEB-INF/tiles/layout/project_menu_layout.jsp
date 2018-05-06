@@ -10,6 +10,7 @@
 	<link href="/resources/css/style.css" rel="stylesheet">
 	<link href="/resources/css/common/util.css" rel="stylesheet">
 	<link href="/resources/css/datepickk.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 
 	<script src="/resources/js/jquery-1.11.1.js"></script>
 	<script src="/resources/js/jquery-1.11.1.min.js"></script>
@@ -26,8 +27,10 @@
 	<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="/resources/js/jquery.scrollTo.min.js"></script>
 	<script src="/resources/js/jquery.sparkline.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 	<script src="/resources/js/datepickk.js"></script>
 
+	<script src="/resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
 	<script src="/resources/js/common/util.js"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>

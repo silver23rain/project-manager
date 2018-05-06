@@ -193,6 +193,14 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.4</version>
         </dependency>
+
+        <!--devtool-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>1.5.2.RELEASE</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>project-manager</finalName>

@@ -32,18 +32,24 @@ var BackLog = {
 		$target.append(html);
 	},
 	initSprintTemplate: function() {
+        Handlebars.registerHelper("checkSprintStatus", function(options) {
+            if (this.sprint_status !== "CLOSE") {
+                return options.fn(this);
+            } else {
+                return options.inverse(this);
+            }
+        });
 		var source = $("#sprintListTemplate").html();
 		var template = Handlebars.compile(source);
 		var html = template(sprintNameList);
 		$("#sprint_main").append(html);
-	},
-	bindEvents: function() {
-		$(".sortable").sortable({
+    }, bindEvents: function() {
+        $(".sortable").sortable({
             items: "li",
             connectWith: '.sortable',
-			group:'.sortable',
+            group:'.sortable',
             receive: function(event) {
-               $.ajax({
+                $.ajax({
 				   url:"/project/backlog/updateBacklog",
 				   method:"POST",
 				   dataType:"json",
@@ -97,32 +103,11 @@ var BackLog = {
 					project_id: Project.Data.projectId
 				},
 				success: function(result) {
-					Sprint.Modal.showNewSprintModal(result);
+                    Sprint.createSprint(result);
 				}
 			});
 		});
-		$("#modal_submit").on("click", function() {
-			$.ajax({
-				url: "/project/sprint/create",
-				method: "POST",
-				dataType: "json",
-				data: {
-					project_id: Project.Data.projectId,
-					sprint_year: $("#sprint_name").attr("sprint-year"),
-					sprint_no : $("#sprint_name").attr("sprint-no"),
-					sprint_goal: $("#sprint_goal").val()
-				},
-				success: function(result) {
-					if(result.code === "SUCCESS"){
-						window.location.reload();
-					}
-					Project.Util.alertBanner($("#main-content .wrapper"),"스프린트를 생성하는데 실패하였습니다.");
-				},complete: function() {
-					$('#simple_modal').toggle();
-				}
 
-			});
-		});
 		$("#sprint_main .fa").on("click",function() {
 			var $collapse = $(this).parent().next(".row").find(".collapse");
 			var _this = $(this);
@@ -138,7 +123,14 @@ var BackLog = {
 		});
 
 		$(".sprint-open-btn").on("click",function() {
-			Sprint.Modal.showOpenSprintModal();
+			var $sprintDiv = $(this).parent().parent();
+			var data = {
+				sprintTitle :$sprintDiv.find(".sprint-title").text(),
+				sprintYear : $sprintDiv.find("ul").attr("sprint-year"),
+				sprintNo : $sprintDiv.find("ul").attr("sprint-no")
+			};
+			Sprint.Modal.showOpenSprintModal(data);
+			console.log(data);
 		});
 
 	}

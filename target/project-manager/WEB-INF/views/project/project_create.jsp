@@ -35,11 +35,12 @@
 	#project_name {
 		width: 100%;
 		height: 30px;
-		margin: 10px 0px;
+		margin: 10px 0px 1px;
 	}
 
 	#create_btn {
 		width: 100%;
+		margin-top: 5px;
 	}
 </style>
 <section id="main-content">
@@ -51,7 +52,7 @@
 				<p>프로젝트 명</p>
 				<input type="text" id="project_name" placeholder="프로젝트 명을 입력해주세요.(영어만 가능)" autofocus="autofocus">
 				<div  class ="alert-div">
-					<div class="alert-danger alert-sm" id="project_name_alert"></div>
+					<div class="alert-danger alert-sm alert" id="project_name_alert"></div>
 				</div>
 				<button class="btn btn-primary btn-sm" id="create_btn">생성</button>
 			</div>

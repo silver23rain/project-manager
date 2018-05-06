@@ -7,11 +7,11 @@
 			<div class="login-wrap">
 				<input type="text" name="user_id" id="user_id" class="form-control" placeholder="아이디" autofocus>
 				<div class="alert-div">
-					<div class="alert-danger" id="user_id_alert"></div>
+					<div class="alert-danger alert" id="user_id_alert"></div>
 				</div>
 				<input type="password" name="user_password" id="user_password" class="form-control" placeholder="비밀번호">
 				<div class="alert-div" >
-					<div class="alert-danger" id="user_pw_alert"></div>
+					<div class="alert-danger alert" id="user_pw_alert"></div>
 				</div>
 				<label class="checkbox">
 		                <span class="pull-right">

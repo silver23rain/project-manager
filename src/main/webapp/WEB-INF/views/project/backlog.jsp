@@ -43,7 +43,7 @@
 									<input type="text" placeholder="백로그명을 입력하시오." id="backlog_name"
 									       class="form-control">
 									<div class="alert-div">
-										<div class="alert-danger" id="backlog_name_alert"
+										<div class="alert-danger alert-sm alert" id="backlog_name_alert"
 										></div>
 									</div>
 								</div>
@@ -104,8 +104,9 @@
 </script>
 <script id="sprintListTemplate" type="text/x-handlebars-template">
 	{{#each.}}
+	{{#checkSprintStatus}}
 	<div>
-		<h3><i class="fa fa-angle-right"></i>{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}
+        <h3><i class="fa fa-angle-right"></i><span class ="sprint-title">{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}</span>
 			<div class="status-badge">
 				<span class="badge bg-theme">0</span>
 				<span class="badge bg-primary">0</span>
@@ -128,5 +129,6 @@
 			</div>
 		</div>
 	</div>
+	{{/checkSprintStatus}}
 	{{/each}}
 </script>

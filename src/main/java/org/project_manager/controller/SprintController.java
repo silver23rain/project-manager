@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.HashMap;
 
 @Controller
@@ -36,5 +38,11 @@ public class SprintController {
 			return ResultCode.INSERT_ERROR.toJSON();
 		}
 		return  ResultCode.SUCCESS.toJSON();
+	}
+
+	@RequestMapping(value= "/update")
+	@ResponseBody
+	public void updateSprint(SprintDTO sprintDTO){
+		sprintService.openSprint(sprintDTO);
 	}
 }

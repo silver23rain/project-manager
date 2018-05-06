@@ -1,10 +1,26 @@
 .alert-div{
     height: 25px;
 }
-.alert-div .alert-danger{
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.alert-div > .alert-danger{
     margin-top: 3px;
     padding: 3px;
     display: none;
+    -webkit-animation:blink 1s ease-in-out alternate;
+    -moz-animation:blink 1s ease-in-out alternate;
+    animation:blink 1s ease-in-out alternate;
 }
 
 .empty_row {

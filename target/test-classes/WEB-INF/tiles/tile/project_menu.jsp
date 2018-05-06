@@ -25,6 +25,7 @@
 	Project.Data.projectId = <c:out value="${selectedProjectId}"/>;
 
 	$(function() {
+        $(".sidebar-menu").niceScroll();
 		initMenuTemplate();
 		bindEvents();
 		focusSelected();
@@ -69,7 +70,7 @@
 		</a>
 		<ul class="sub">
 			<li><a href="/project/backlog?project_id="><i class=" fa fa-align-justify"></i>백로그</a></li>
-			<li><a><i class="fa fa-columns"></i>칸반보드</a></li>
+			<li><a href="/project/board?project_id="><i class="fa fa-columns"></i>스크럼 보드</a></li>
 			<li><a><i class=" fa fa-bar-chart-o"></i>보고서</a></li>
 			<li><a><i class="fa fa-cog"></i>설정</a></li>
 		</ul>

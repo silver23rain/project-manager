@@ -36,4 +36,10 @@ public class SprintService {
 		List<HashMap<String, Object>> sprintList = sprintDAO.getSprintNameList(project_id);
 		return sprintList;
 	}
+
+	public void openSprint (SprintDTO sprintDTO){
+//		sprintDTO.setStart_date(sprintDTO.getStart_date().getTime() + 1);
+		sprintDTO.setSprint_status("OPEN");
+		sprintDAO.updateSprint(sprintDTO);
+	}
 }
