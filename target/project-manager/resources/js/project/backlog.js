@@ -43,26 +43,29 @@ var BackLog = {
 		var template = Handlebars.compile(source);
 		var html = template(sprintNameList);
 		$("#sprint_main").append(html);
+    },
+	updateSprintKey: function (event) {
+        $.ajax({
+            url: "/project/backlog/updateBacklog",
+            method: "POST",
+            dataType: "json",
+            data: {
+                sprint_year: $(event.target).attr("sprint-year"),
+                sprint_no: $(event.target).attr("sprint-no"),
+                project_id: Project.Data.projectId,
+                bl_no: $(event.toElement).find('a').attr("bl-no")
+            },
+            success: function () {
+                BackLog.checkisEmptyExcludeSprintBacklogList();
+            }
+        })
     }, bindEvents: function() {
         $(".sortable").sortable({
             items: "li",
             connectWith: '.sortable',
             group:'.sortable',
             receive: function(event) {
-                $.ajax({
-				   url:"/project/backlog/updateBacklog",
-				   method:"POST",
-				   dataType:"json",
-				   data:{
-					   sprint_year: $(event.target).attr("sprint-year"),
-					   sprint_no: $(event.target).attr("sprint-no"),
-                       project_id:Project.Data.projectId,
-					   bl_no : $(event.toElement).find('a').attr("bl-no")
-				   },
-				   success: function() {
-					   BackLog.checkisEmptyExcludeSprintBacklogList();
-				   }
-			   })
+                BackLog.updateSprintKey(event);
 			}
 		});
 		$(".sortable").disableSelection();
@@ -93,6 +96,11 @@ var BackLog = {
 			});
 
 		});
+
+		$(".backlog-id").on("click",function(){
+            console.log($(this).parent().attr("bl-no"));
+            $("#backlogDetailModal").modal('show');
+        });
 
 		$("#sprint_create_btn").on("click", function() {
 			$.ajax({

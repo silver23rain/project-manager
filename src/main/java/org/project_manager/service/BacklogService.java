@@ -31,4 +31,17 @@ public class BacklogService {
         backLogDAO.updateBacklog(backlogDTO);
     }
 
+    public List<BacklogDTO> includeSprintBacklogList(int project_id){
+        return backLogDAO.includeSprintBacklogList(project_id);
+    }
+
+    public List<HashMap<Integer,String >> getBacklogStatus (){
+        return backLogDAO.getBacklogStatus();
+    }
+
+    public void updateStatus(BacklogDTO backlogDTO){
+        backlogDTO.setStatus_id(1);
+        backLogDAO.updateStatus(backlogDTO);
+    }
+
 }

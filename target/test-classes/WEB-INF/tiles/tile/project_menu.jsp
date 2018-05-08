@@ -25,7 +25,6 @@
 	Project.Data.projectId = <c:out value="${selectedProjectId}"/>;
 
 	$(function() {
-        $(".sidebar-menu").niceScroll();
 		initMenuTemplate();
 		bindEvents();
 		focusSelected();

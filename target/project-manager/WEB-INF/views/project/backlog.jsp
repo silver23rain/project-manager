@@ -74,6 +74,23 @@
 		</div>
 	</div>
 </div>
+
+<div class="modal fade" id="backlogDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title"></h4>
+			</div>
+			<div class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm btn-info" id="modal_submit"></button>
+				<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
 <xmldata id="backlogListXmlData"
          data-backLogList="<c:out value="${backLogList}"/>"
          data-sprintNameList="<c:out value="${sprintNameList}"/>">
@@ -93,8 +110,8 @@
 	<li class="list-warning backlog-list">
 		<i class=" fa  fa-angle-double-up"></i>
 		<div class="task-title">
-			<a bl-no="{{bl_no}}" class="col-md-2 col-sm-2"> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
-			<span class="task-title-sp col-sm-8">{{bl_title}}</span>
+			<a bl-no="{{bl_no}}" class="col-md-2 col-sm-2  "> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
+			<span class="task-title-sp col-sm-7">{{bl_title}}</span>
 			<span class="badge bg-warning">{{bl_status}}</span>
 			<div class="pull-right hidden-phone">
 				<span class="badge">{{story_point}}</span>

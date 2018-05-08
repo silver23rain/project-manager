@@ -1,7 +1,9 @@
 package org.project_manager.controller;
 
+import org.project_manager.domain.BacklogDTO;
 import org.project_manager.domain.ResultCode;
 import org.project_manager.domain.SprintDTO;
+import org.project_manager.service.BacklogService;
 import org.project_manager.service.SprintService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,9 @@ import java.util.HashMap;
 public class SprintController {
 	@Inject
 	SprintService sprintService;
+
+	@Inject
+	BacklogService backlogService;
 
 
 	@RequestMapping(value = "/info")
@@ -43,6 +48,13 @@ public class SprintController {
 	@RequestMapping(value= "/update")
 	@ResponseBody
 	public void updateSprint(SprintDTO sprintDTO){
+
 		sprintService.openSprint(sprintDTO);
+
+		BacklogDTO backlogDTO = new BacklogDTO();
+		backlogDTO.setProject_id(sprintDTO.getProject_id());
+		backlogDTO.setSprint_year(sprintDTO.getSprint_year());
+		backlogDTO.setSprint_no(sprintDTO.getSprint_no());
+		backlogService.updateStatus(backlogDTO);
 	}
 }

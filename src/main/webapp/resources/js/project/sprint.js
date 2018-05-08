@@ -33,8 +33,8 @@ function sprintStartCallback() {
         method: "POST",
         dataType: "json",
         data: Sprint.Modal.modalData,
-        success: function (result) {
-            console.log(result);
+        success: function () {
+            $('#simple_modal').modal('hide')
         }
     })
 }

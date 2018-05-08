@@ -30,4 +30,15 @@ public class BacklogDAO {
         sqlSession.update(namespace+".updateBacklog",backlogDTO);
     }
 
+    public List<BacklogDTO> includeSprintBacklogList (int project_id) {
+        return sqlSession.selectList(namespace + ".includeSprintBacklogList", project_id);
+    }
+
+    public List<HashMap<Integer,String>> getBacklogStatus (){
+        return sqlSession.selectList(namespace+".getBacklogStatus");
+    }
+
+    public void updateStatus(BacklogDTO backlogDTO){
+        sqlSession.update(namespace+".updateStatus", backlogDTO);
+    }
 }

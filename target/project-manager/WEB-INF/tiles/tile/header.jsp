@@ -18,7 +18,7 @@
 				<ul class="dropdown-menu extended tasks-bar">
 					<div class="notify-arrow notify-arrow-green"></div>
 					<li>
-						<p class="green">You have 4 pending tasks</p>
+						<p class="green">프로젝트 진행사항</p>
 					</li>
 					<li>
 						<a href="index.html#">
@@ -73,7 +73,7 @@
 						</a>
 					</li>
 					<li class="external">
-						<a href="#">See All Tasks</a>
+						<a href="#">전체 보기</a>
 					</li>
 				</ul>
 			</li>
@@ -87,7 +87,7 @@
 				<ul class="dropdown-menu extended inbox">
 					<div class="notify-arrow notify-arrow-green"></div>
 					<li>
-						<p class="green">You have 5 new messages</p>
+						<p class="green">새로운 알림</p>
 					</li>
 					<li>
 						<a href="index.html#">
@@ -138,7 +138,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">See all messages</a>
+						<a href="index.html#">알림 전체보기</a>
 					</li>
 				</ul>
 			</li>

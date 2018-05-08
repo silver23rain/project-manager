@@ -38,4 +38,28 @@
         where project_id = #{project_id}
         and bl_no = #{bl_no}
     </update>
+    
+    <update id="updateStatus" >
+        update backlog
+        set status_id = #{status_id}
+        where project_id = #{project_id}
+        and sprint_year = #{sprint_year}
+        and sprint_no = #{sprint_no}
+    </update>
+
+    <select id="includeSprintBacklogList" resultType="BacklogDTO">
+      select bl_no, bl_title, bl_writer, assigned_user, story_point, backlog.status_id
+        from backlog
+        left join backlog_status
+        on backlog.status_id = backlog_status.status_id
+        where (sprint_year,sprint_no,project_id) IN (
+        select sprint_year,sprint_no,project_id
+        from sprint
+        where project_id =#{project_id}
+        and sprint_status = "OPEN")
+    </select>
+
+    <select id="getBacklogStatus" resultType="java.util.HashMap">
+        select * from backlog_status
+    </select>
 </mapper>
