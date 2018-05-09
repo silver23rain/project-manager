@@ -52,4 +52,3 @@ Project.Util.confirm = function (title, contents, submitCallback, cancelCallback
         }
     })
 };
-

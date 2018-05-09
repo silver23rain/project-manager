@@ -9,6 +9,8 @@ import org.project_manager.service.AuthorityService;
 import org.project_manager.service.BacklogService;
 import org.project_manager.service.ProjectService;
 import org.project_manager.service.SprintService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -77,5 +79,13 @@ public class BacklogController {
 			return ResultCode.UPDATE_ERROR.toJSON();
 		}
 		return ResultCode.SUCCESS.toJSON();
+	}
+
+	@RequestMapping(value = "/detail", method = RequestMethod.POST)
+	@ResponseBody
+	public ResponseEntity<BacklogDTO> getBacklogDetail
+			(@RequestParam("bl_no") Integer bl_no,
+			 @RequestParam("project_id") Integer project_id){
+		return new ResponseEntity<>(backlogService.getBacklogDetail(project_id,bl_no), HttpStatus.OK);
 	}
 }

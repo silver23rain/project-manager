@@ -31,13 +31,14 @@
 	<script src="/resources/js/datepickk.js"></script>
 
 	<script src="/resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
-	<script src="/resources/js/common/util.js"></script>
+	<script src="/resources/js/common/util.js?ver=1"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>
 	<div id="main_body">
 		<tiles:insertAttribute name="body"/>
+		<tiles:insertAttribute name="modal"/>
 		<tiles:insertAttribute name="footer"/>
 	</div>
 </section>

@@ -44,4 +44,11 @@ public class BacklogService {
         backLogDAO.updateStatus(backlogDTO);
     }
 
+    public BacklogDTO getBacklogDetail (Integer project_id, Integer bl_no){
+        HashMap<String,Object> hashMap = new HashMap<>();
+        hashMap.put("project_id" , project_id);
+        hashMap.put("bl_no" , bl_no);
+        return backLogDAO.getBacklogDetail(hashMap);
+    }
+
 }

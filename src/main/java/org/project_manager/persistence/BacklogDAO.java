@@ -41,4 +41,8 @@ public class BacklogDAO {
     public void updateStatus(BacklogDTO backlogDTO){
         sqlSession.update(namespace+".updateStatus", backlogDTO);
     }
+
+    public BacklogDTO getBacklogDetail(HashMap<String,Object> hashMap){
+        return sqlSession.selectOne(namespace+".backlogDetail",hashMap);
+    }
 }

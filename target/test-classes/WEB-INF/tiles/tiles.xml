@@ -35,6 +35,7 @@
 
     <definition name ="/project/*" extends="dynamic_menu">
         <put-attribute name="body" value="/WEB-INF/views/project/{1}.jsp"/>
+        <put-attribute name="modal" value="/WEB-INF/views/project/backlog_detail.jsp"/>
     </definition>
 
 </tiles-definitions>

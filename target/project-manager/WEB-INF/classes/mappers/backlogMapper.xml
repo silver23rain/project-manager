@@ -38,8 +38,8 @@
         where project_id = #{project_id}
         and bl_no = #{bl_no}
     </update>
-    
-    <update id="updateStatus" >
+
+    <update id="updateStatus">
         update backlog
         set status_id = #{status_id}
         where project_id = #{project_id}
@@ -61,5 +61,11 @@
 
     <select id="getBacklogStatus" resultType="java.util.HashMap">
         select * from backlog_status
+    </select>
+
+    <select id="backlogDetail" parameterType="java.util.HashMap" resultType="BacklogDTO">
+        select * from backlog
+        where bl_no = #{bl_no}
+        and project_id = #{project_id};
     </select>
 </mapper>

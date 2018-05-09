@@ -1,7 +1,8 @@
-var BackLog = {
+var Backlog = {
 	init: function() {
 		this.includeSprintBacklog();
 		this.checkisEmptyExcludeSprintBacklogList();
+		Backlog.Modal.bindEvents();
 		$(".sprint-list").each(function () {
 			if($(this).find("li.backlog-list").length !== 0){
 				$(this).parent().parent().addClass("in");
@@ -12,9 +13,9 @@ var BackLog = {
 		$.each(backLogList, function(index, item) {
 			if(!Project.Data.isEmpty(item.sprint_year) && !Project.Data.isEmpty(item.sprint_no)) {
 				var id = item.sprint_year + '_' + item.sprint_no;
-				BackLog.initBacklogTemplate($("#" + id), item);
+				Backlog.initBacklogTemplate($("#" + id), item);
 			} else {
-				BackLog.initBacklogTemplate($("#backlog_list"), item);
+				Backlog.initBacklogTemplate($("#backlog_list"), item);
 			}
 		})
 	},checkisEmptyExcludeSprintBacklogList: function() {
@@ -56,7 +57,7 @@ var BackLog = {
                 bl_no: $(event.toElement).find('a').attr("bl-no")
             },
             success: function () {
-                BackLog.checkisEmptyExcludeSprintBacklogList();
+                Backlog.checkisEmptyExcludeSprintBacklogList();
             }
         })
     }, bindEvents: function() {
@@ -65,7 +66,7 @@ var BackLog = {
             connectWith: '.sortable',
             group:'.sortable',
             receive: function(event) {
-                BackLog.updateSprintKey(event);
+                Backlog.updateSprintKey(event);
 			}
 		});
 		$(".sortable").disableSelection();
@@ -98,8 +99,38 @@ var BackLog = {
 		});
 
 		$(".backlog-id").on("click",function(){
-            console.log($(this).parent().attr("bl-no"));
-            $("#backlogDetailModal").modal('show');
+			$.ajax({
+				url: "/project/backlog/detail",
+				method: "POST",
+				dataType: "json",
+				data: {
+					project_id: Project.Data.projectId,
+					bl_no: $(this).parent().attr("bl-no")
+				},
+				success: function(result) {
+					Backlog.Modal.setData(result);
+					var projectName = $("[project-id="+Project.Data.projectId+"]").find("span").text();
+
+					var $modal = $("#backlogDetailModal");
+					$modal.find("[name=project_name]").text(projectName);
+					$modal.find("[name=backlog_title]").val(Backlog.Modal.bl_title);
+					$modal.find("[name=backlog_contents]").text(Backlog.Modal.bl_content === null ?"" :Backlog.Modal.bl_content);
+					$modal.find("[name=backlog_assigned]").text(Backlog.Modal.assigned_user === null ?"아직 담당자가 없습니다.": Backlog.Modal.assigned_user);
+
+					var $storyPoint = $modal.find("[name =story_point] li>a");
+					$storyPoint.removeClass("selected");
+					$storyPoint.each(function(index, item) {
+						if(Backlog.Modal.story_point.toString() === $(this).text()){
+							$(this).addClass("selected");
+							$modal.find(".selectedItem").html(Backlog.Modal.story_point+'<span class="fa fa-caret-down"></span>');
+							return;
+						}
+					});
+					$modal.find(".selectedItem").text();
+
+					Backlog.Modal.show();
+				}
+			});
         });
 
 		$("#sprint_create_btn").on("click", function() {
@@ -144,3 +175,27 @@ var BackLog = {
 	}
 };
 
+Backlog.Modal ={
+	modalDiv : "#backlogDetailModal",
+	bl_title:"",
+	assigned_user:null,
+	story_point : 0,
+	bl_content:null,
+	bl_no : null,
+	setData: function(data) {
+		this.bl_title = data.bl_title;
+		this.assigned_user = data.assigned_user;
+		this.story_point = data.story_point;
+		this.bl_content = data.bl_content;
+		this.bl_no = data.bl_no
+	},
+	bindEvents: function() {
+		$(this.modalDiv).find("#modal_submit").on("click",function() {
+			console.log("submit")
+		})
+	},
+	show : function() {
+		$(this.modalDiv).modal('show');
+	},
+
+};
