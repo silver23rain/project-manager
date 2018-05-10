@@ -38,13 +38,12 @@
 					<h5>{{bl_status}}</h5>
 				</div>
 				<div class="row">
-					<ul class="task-list sortable sprint-list">
-						<li class="list-warning">
-							<div class="" style="min-height: 30px; background: white; width: 87%; margin-bottom: 8px;">	sadssadasd
-							</div>
+					<ul class="sortable">
+						<li >
+							dd
 						</li>
-						<li class="list-warning">
-							<div class="" style="min-height: 30px; background: white; width: 87% ;margin-bottom: 8px;">dsaads</div>
+						<li >
+							dd
 						</li>
 					</ul>
 				</div>

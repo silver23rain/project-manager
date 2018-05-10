@@ -34,6 +34,7 @@
 	<script src="/resources/js/common/util.js?ver=1"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="/resources/js/project/block.js"></script>
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>
