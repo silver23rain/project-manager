@@ -7,7 +7,6 @@
 	<link href="/resources/css/bootstrap.css" rel="stylesheet">
 	<!--external css-->
 	<link href="/resources/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-	<link rel="stylesheet" type="text/css" href="/resources/css/zabuto_calendar.css">
 	<link rel="stylesheet" type="text/css" href="/resources/js/gritter/css/jquery.gritter.css"/>
 	<link rel="stylesheet" type="text/css" href="/resources/lineicons/style.css">
 
@@ -38,7 +37,7 @@
 	<script src="/resources/js/bootstrap.min.js"></script>
 	<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="/resources/js/jquery.scrollTo.min.js"></script>
-	<%--<script src="resources/js/jquery.nicescroll.js" type="text/javascript"></script>--%>
+	<script src="resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
 	<script src="/resources/js/jquery.sparkline.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.5.rc1.min.css" />
@@ -53,7 +52,7 @@
 </section>
 
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js"></script>
+<script src="/resources/js/common-scripts.js?ver=1"></script>
 
 <script type="text/javascript" src="/resources/js/gritter/js/jquery.gritter.js"></script>
 <script type="text/javascript" src="/resources/js/gritter-conf.js"></script>

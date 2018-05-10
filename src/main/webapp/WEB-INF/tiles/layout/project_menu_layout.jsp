@@ -43,7 +43,7 @@
 	</div>
 </section>
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js"></script>
+<script src="/resources/js/common-scripts.js?ver=1"></script>
 
 <script type="application/javascript">
 	$(document).ready(function () {

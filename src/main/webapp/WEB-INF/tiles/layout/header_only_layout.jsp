@@ -6,7 +6,6 @@
 	<link href="/resources/css/bootstrap.css" rel="stylesheet">
 	<!--external css-->
 	<link href="/resources/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-	<link rel="stylesheet" type="text/css" href="/resources/css/zabuto_calendar.css">
 	<link rel="stylesheet" type="text/css" href="/resources/js/gritter/css/jquery.gritter.css"/>
 	<link rel="stylesheet" type="text/css" href="/resources/lineicons/style.css">
 
@@ -38,6 +37,6 @@
 		<tiles:insertAttribute name="body"/>
 	</section>
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js"></script>
+<script src="/resources/js/common-scripts.js?ver=1"></script>
 </body>
 </html>

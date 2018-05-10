@@ -3,8 +3,8 @@ var Backlog = {
 		this.includeSprintBacklog();
 		this.checkisEmptyExcludeSprintBacklogList();
 		Backlog.Modal.bindEvents();
-		$(".sprint-list").each(function () {
-			if($(this).find("li.backlog-list").length !== 0){
+		$(".sprint-list").each(function() {
+			if($(this).find("li.backlog-list").length !== 0) {
 				$(this).parent().parent().addClass("in");
 			}
 		})
@@ -18,55 +18,55 @@ var Backlog = {
 				Backlog.initBacklogTemplate($("#backlog_list"), item);
 			}
 		})
-	},checkisEmptyExcludeSprintBacklogList: function() {
+	}, checkisEmptyExcludeSprintBacklogList: function() {
 		if($("#backlog_list li.backlog-list").length === 0 || backLogList === undefined) {
 			var $li = "<li class='text-center' id='empty_backlog'>생성된 백로그가 없습니다.</li>";
 			$("#backlog_list").append($li);
-		}else{
+		} else {
 			$("#empty_backlog").remove();
 		}
 	},
-	initBacklogTemplate: function($target,list) {
+	initBacklogTemplate: function($target, list) {
 		var source = $("#backlogListTemplate").html();
 		var template = Handlebars.compile(source);
 		var html = template(list);
 		$target.append(html);
 	},
 	initSprintTemplate: function() {
-        Handlebars.registerHelper("checkSprintStatus", function(options) {
-            if (this.sprint_status !== "CLOSE") {
-                return options.fn(this);
-            } else {
-                return options.inverse(this);
-            }
-        });
+		Handlebars.registerHelper("checkSprintStatus", function(options) {
+			if(this.sprint_status !== "CLOSE") {
+				return options.fn(this);
+			} else {
+				return options.inverse(this);
+			}
+		});
 		var source = $("#sprintListTemplate").html();
 		var template = Handlebars.compile(source);
 		var html = template(sprintNameList);
 		$("#sprint_main").append(html);
-    },
-	updateSprintKey: function (event) {
-        $.ajax({
-            url: "/project/backlog/updateBacklog",
-            method: "POST",
-            dataType: "json",
-            data: {
-                sprint_year: $(event.target).attr("sprint-year"),
-                sprint_no: $(event.target).attr("sprint-no"),
-                project_id: Project.Data.projectId,
-                bl_no: $(event.toElement).find('a').attr("bl-no")
-            },
-            success: function () {
-                Backlog.checkisEmptyExcludeSprintBacklogList();
-            }
-        })
-    }, bindEvents: function() {
-        $(".sortable").sortable({
-            items: "li",
-            connectWith: '.sortable',
-            group:'.sortable',
-            receive: function(event) {
-                Backlog.updateSprintKey(event);
+	},
+	updateSprintKey: function(event) {
+		$.ajax({
+			url: "/project/backlog/updateBacklog",
+			method: "POST",
+			dataType: "json",
+			data: {
+				sprint_year: $(event.target).attr("sprint-year"),
+				sprint_no: $(event.target).attr("sprint-no"),
+				project_id: Project.Data.projectId,
+				bl_no: $(event.toElement).find('a').attr("bl-no")
+			},
+			success: function() {
+				Backlog.checkisEmptyExcludeSprintBacklogList();
+			}
+		})
+	}, bindEvents: function() {
+		$(".sortable").sortable({
+			items: "li",
+			connectWith: '.sortable',
+			group: '.sortable',
+			receive: function(event) {
+				Backlog.updateSprintKey(event);
 			}
 		});
 		$(".sortable").disableSelection();
@@ -98,7 +98,8 @@ var Backlog = {
 
 		});
 
-		$(".backlog-id").on("click",function(){
+		$(".backlog-id").on("click", function() {
+			var backlogKey = $(this).text();
 			$.ajax({
 				url: "/project/backlog/detail",
 				method: "POST",
@@ -109,20 +110,22 @@ var Backlog = {
 				},
 				success: function(result) {
 					Backlog.Modal.setData(result);
-					var projectName = $("[project-id="+Project.Data.projectId+"]").find("span").text();
+					var projectName = $("[project-id=" + Project.Data.projectId + "]").find("span").text();
 
-					var $modal = $("#backlogDetailModal");
+					var $modal = $(Backlog.Modal.modalDiv);
+					$modal.find('[name=backlog_key]').text(backlogKey);
 					$modal.find("[name=project_name]").text(projectName);
 					$modal.find("[name=backlog_title]").val(Backlog.Modal.bl_title);
-					$modal.find("[name=backlog_contents]").text(Backlog.Modal.bl_content === null ?"" :Backlog.Modal.bl_content);
-					$modal.find("[name=backlog_assigned]").text(Backlog.Modal.assigned_user === null ?"아직 담당자가 없습니다.": Backlog.Modal.assigned_user);
+					$modal.find("[name=backlog_contents]").text(Backlog.Modal.bl_content === null ? "" : Backlog.Modal.bl_content);
+					$modal.find("[name=backlog_assigned]").text(Backlog.Modal.assigned_user === undefined ? "없음" : Backlog.Modal.assigned_user);
 
 					var $storyPoint = $modal.find("[name =story_point] li>a");
 					$storyPoint.removeClass("selected");
 					$storyPoint.each(function(index, item) {
-						if(Backlog.Modal.story_point.toString() === $(this).text()){
+						if(Backlog.Modal.story_point.toString() === $(this).text()) {
 							$(this).addClass("selected");
-							$modal.find(".selectedItem").html(Backlog.Modal.story_point+'<span class="fa fa-caret-down"></span>');
+							var $span = '<span class="fa fa-caret-down"></span>';
+							$modal.find(".selectedItem").html(Backlog.Modal.story_point + $span);
 							return;
 						}
 					});
@@ -131,7 +134,7 @@ var Backlog = {
 					Backlog.Modal.show();
 				}
 			});
-        });
+		});
 
 		$("#sprint_create_btn").on("click", function() {
 			$.ajax({
@@ -142,31 +145,31 @@ var Backlog = {
 					project_id: Project.Data.projectId
 				},
 				success: function(result) {
-                    Sprint.createSprint(result);
+					Sprint.createSprint(result);
 				}
 			});
 		});
 
-		$("#sprint_main .fa").on("click",function() {
+		$("#sprint_main .fa").on("click", function() {
 			var $collapse = $(this).parent().next(".row").find(".collapse");
 			var _this = $(this);
-			if($collapse.hasClass("in")){
+			if($collapse.hasClass("in")) {
 				$collapse.collapse("hide");
 				_this.removeClass("fa-angle-down");
 				_this.addClass("fa-angle-right");
-			}else{
+			} else {
 				$collapse.collapse("show");
 				_this.removeClass("fa-angle-right");
 				_this.addClass("fa-angle-down");
 			}
 		});
 
-		$(".sprint-open-btn").on("click",function() {
+		$(".sprint-open-btn").on("click", function() {
 			var $sprintDiv = $(this).parent().parent();
 			var data = {
-				sprintTitle :$sprintDiv.find(".sprint-title").text(),
-				sprintYear : $sprintDiv.find("ul").attr("sprint-year"),
-				sprintNo : $sprintDiv.find("ul").attr("sprint-no")
+				sprintTitle: $sprintDiv.find(".sprint-title").text(),
+				sprintYear: $sprintDiv.find("ul").attr("sprint-year"),
+				sprintNo: $sprintDiv.find("ul").attr("sprint-no")
 			};
 			Sprint.Modal.showOpenSprintModal(data);
 			console.log(data);
@@ -175,27 +178,52 @@ var Backlog = {
 	}
 };
 
-Backlog.Modal ={
-	modalDiv : "#backlogDetailModal",
-	bl_title:"",
-	assigned_user:null,
-	story_point : 0,
-	bl_content:null,
-	bl_no : null,
+Backlog.Modal = {
+	modalDiv: "#backlogDetailModal",
+	bl_title: "",
+	assigned_user: undefined,
+	story_point: 0,
+	bl_content: null,
+	bl_no: null,
 	setData: function(data) {
 		this.bl_title = data.bl_title;
-		this.assigned_user = data.assigned_user;
+		this.assigned_user = data.assigned_user? data.assigned_user:this.assigned_user;
 		this.story_point = data.story_point;
 		this.bl_content = data.bl_content;
-		this.bl_no = data.bl_no
+		this.bl_no = data.bl_no ? data.bl_no: this.bl_no;
 	},
 	bindEvents: function() {
-		$(this.modalDiv).find("#modal_submit").on("click",function() {
-			console.log("submit")
+		$(this.modalDiv).find("#modal_submit").on("click", function() {
+			/*TODO 저장시  modal 데이터 DB update*/
+
+			Backlog.Modal.setData({
+				bl_title: $(Backlog.Modal.modalDiv).find("[name=backlog_title]").val(),
+				story_point: $(Backlog.Modal.modalDiv).find('[name="story_point"] .selected ').text(),
+				bl_content: $(Backlog.Modal.modalDiv).find("[name=backlog_contents]").val()
+			});
+
+			$.ajax({
+				url:"/project/backlog/updateBacklog",
+				method :"POST",
+				dataType :"json",
+				data : Backlog.Modal.getModalData(),
+				success: function(result) {
+					console.log("성공");
+				}
+			})
 		})
 	},
-	show : function() {
+	show: function() {
 		$(this.modalDiv).modal('show');
 	},
-
+	getModalData: function() {
+		return {
+			bl_title: this.bl_title,
+			assigned_user: this.assigned_user,
+			story_point: this.story_point,
+			bl_content: this.bl_content,
+			bl_no: this.bl_no,
+			project_id: Project.Data.projectId
+		}
+	}
 };

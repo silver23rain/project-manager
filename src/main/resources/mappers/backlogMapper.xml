@@ -24,17 +24,17 @@
         where backlog.project_id= #{project_id}
     </select>
 
-    <update id="updateBacklog">
+    <update id="updateBacklog" parameterType="BacklogDTO">
         update backlog
-        <choose>
-            <when test="bl_title== null">
-                set sprint_no = #{sprint_no}, sprint_year = #{sprint_year}
-            </when>
-            <otherwise>
-                set bl_title = #{bl_title},bl_content = #{bl_content},assigned_user = #{assigned_user},story_point =
-                #{story_point},status_id = #{status_id}
-            </otherwise>
-        </choose>
+        <set>
+            <if test="bl_title== null">
+               sprint_no = #{sprint_no}, sprint_year = #{sprint_year}
+            </if>
+            <if test="bl_title !=null">
+                bl_title = #{bl_title}, bl_content = #{bl_content}, assigned_user = #{assigned_user}, story_point =
+                #{story_point}
+            </if>
+        </set>
         where project_id = #{project_id}
         and bl_no = #{bl_no}
     </update>

@@ -8,7 +8,7 @@ $(function() {
         speed: 'slow',
         showCount: false,
         autoExpand: true,
-//        cookie: 'dcjq-accordion-1',
+       cookie: 'dcjq-accordion-1',
         classExpand: 'dcjq-current-parent'
     });
 });
@@ -116,4 +116,9 @@ var Script = function () {
     }
 
 
+	//bootstrap select
+	$(".dropdown-menu > li").on("click", function() {
+        var $span = '<span class="fa fa-caret-down"></span>';
+       $(this).parent().prev().html($(this).find('a').html() + $span);
+	});
 }();

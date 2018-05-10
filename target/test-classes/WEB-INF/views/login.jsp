@@ -1,5 +1,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style>
+	@keyframes example {
+		from {
+			opacity: 0
+		}
+		to {
+			opacity: 1
+		}
+	}
 
+	#login_form {
+		animation-name: example;
+		animation-duration: 2s;
+	}
+
+
+</style>
 <div id="login-page">
 	<div class="container">
 		<form id="login_form" method="post" action="/user/signin" class="form-login" action="/">
@@ -10,7 +26,7 @@
 					<div class="alert-danger alert" id="user_id_alert"></div>
 				</div>
 				<input type="password" name="user_password" id="user_password" class="form-control" placeholder="비밀번호">
-				<div class="alert-div" >
+				<div class="alert-div">
 					<div class="alert-danger alert" id="user_pw_alert"></div>
 				</div>
 				<label class="checkbox">

@@ -1,11 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style>
+	span [name ="backlog_key"]{
+		margin-right: 8px;
+	}
+</style>
 <div class="modal fade" id="backlogDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title"><span id="backlog_key"></span>백로그 상세</h4>
+				<h4 class="modal-title"><span name="backlog_key"></span>백로그 상세</h4>
 			</div>
 			<div class="modal-body">
 				<div class="form-horizontal">
@@ -36,7 +41,7 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">담당자</label>
 						<div class="col-sm-4">
-							<a><p class="form-control-static" name ="backlog_assigned">미정</p></a>
+							<a><p class="form-control-static" name ="backlog_assigned"></p></a>
 						</div>
 					</div>
 					<div class="form-group">
