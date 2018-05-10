@@ -93,7 +93,6 @@
 			<span class="task-title-sp col-sm-6  col-md-7 col-lg-9">{{bl_title}}</span>
 			<span class="badge bg-warning">{{bl_status}}</span>
 			<div class="pull-right hidden-phone">
-
 				<span class="badge">{{story_point}}</span>
 			</div>
 		</div>
@@ -103,7 +102,7 @@
 	{{#each.}}
 	{{#checkSprintStatus}}
 	<div>
-        <h3><i class="fa fa-angle-right"></i><span class ="sprint-title">{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}</span>
+		<h3><i class="fa fa-angle-right"></i><span class="sprint-title">{{project_name}}스프린트-{{sprint_year}}_{{sprint_no}}</span>
 			<div class="status-badge">
 				<span class="badge bg-theme">0</span>
 				<span class="badge bg-primary">0</span>
@@ -118,6 +117,7 @@
 						<div class="task-content">
 							<ul class="task-list sortable sprint-list" id="{{sprint_year}}_{{sprint_no}}"
 							    sprint-year="{{sprint_year}}" sprint-no="{{sprint_no}}">
+								<li class="hidden-li"></li>
 							</ul>
 						</div>
 					</div>

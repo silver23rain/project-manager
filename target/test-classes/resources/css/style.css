@@ -2204,7 +2204,7 @@ label {
     margin-top: 0;
 }
 
-.ui-sortable > li:not(.hidden-li) {
+.task-content .ui-sortable > li:not(.hidden-li) {
     padding: 11px 0 15px 35px !important ;
     position: relative;
     background: #f5f6f8;
