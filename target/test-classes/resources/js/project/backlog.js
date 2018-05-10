@@ -69,7 +69,7 @@ var Backlog = {
 				Backlog.updateSprintKey(event);
 			}
 		});
-		$(".sortable").disableSelection();
+		// $(".sortable").disableSelection();
 
 		$("#backlog_create_btn").on("click", function() {
 			var backlogName = $("#backlog_name").val();

@@ -982,20 +982,18 @@ PANELS CONFIGURATIONS
 /*Panel Size*/
 
 .pn {
-	height: 250px;
 	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .pn:hover {
 	box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
-	
 }
 
 /*Grey Panel*/
 
 .grey-panel {
 	text-align: center;
-	background: #dfdfe1;
+	background: #f2f2f2;
 }
 .grey-panel .grey-header {
 	background: #ccd1d9;
@@ -1048,16 +1046,43 @@ PANELS CONFIGURATIONS
 	margin-right: 10px;
 	font-weight: 700;
 }
+/*info Panel */
+.header-1{
+    background: #68dff0;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+.header-1 h5,.header-2 h5, .header-3 h5
+{
+    color: white;
+    font-weight: bold;
+}
+
+.header-2{
+    background: #8075c4;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+.header-3{
+    background: #a9d86e;
+    padding: 3px;
+    margin-bottom: 15px;
+}
 
 /*Green Panel*/
 .green-panel {
 	text-align: center;
 	background: #68dff0;
 }
-.green-panel .green-header {
+.green-header {
 	background: #43b1a9;
 	padding: 3px;
 	margin-bottom: 15px;
+}
+.green-header h5{
+    color: white;
+    font-weight: 100;
 }
 .green-panel h5 {
 	color: white;
@@ -1185,7 +1210,7 @@ PANELS CONFIGURATIONS
 .weather-2 {
 	background: #e9f0f4;
 }
-.weather-2 .weather-2-header {
+.weather-2-header {
 	background: #54bae6;
 	padding-top: 5px;
 	margin-bottom: 5px;

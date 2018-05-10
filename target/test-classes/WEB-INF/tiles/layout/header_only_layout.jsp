@@ -37,6 +37,6 @@
 		<tiles:insertAttribute name="body"/>
 	</section>
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js?ver=1"></script>
+<script src="/resources/js/common-scripts.js?ver=2"></script>
 </body>
 </html>

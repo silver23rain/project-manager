@@ -29,4 +29,8 @@ public class SprintDAO {
 	public void updateSprint (SprintDTO sprintDTO){
 		sqlSession.update(namespace +".updateSprint" ,sprintDTO);
 	}
+
+	public HashMap<String,Object> getOpenedSprintData(int project_id){
+		return sqlSession.selectOne(namespace+ ".getOpenedSprintData", project_id);
+	}
 }

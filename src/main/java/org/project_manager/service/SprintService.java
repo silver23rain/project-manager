@@ -1,6 +1,5 @@
 package org.project_manager.service;
 
-import jdk.nashorn.internal.ir.annotations.Immutable;
 import org.project_manager.domain.SprintDTO;
 import org.project_manager.persistence.BacklogDAO;
 import org.project_manager.persistence.ProjectDAO;
@@ -44,5 +43,9 @@ public class SprintService {
 	public void openSprint (SprintDTO sprintDTO){
 		sprintDTO.setSprint_status("OPEN");
 		sprintDAO.updateSprint(sprintDTO);
+	}
+
+	public HashMap<String, Object> getOpenedSprintData (int project_id){
+		return sprintDAO.getOpenedSprintData(project_id);
 	}
 }

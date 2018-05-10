@@ -52,3 +52,9 @@
     top:-50px;
     z-index: 1;
 }
+
+.hidden-li {
+    height: 4px;
+!important;
+    opacity: 0;
+}
