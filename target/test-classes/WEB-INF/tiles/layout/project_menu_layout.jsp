@@ -10,6 +10,7 @@
 	<link href="/resources/css/style.css" rel="stylesheet">
 	<link href="/resources/css/common/util.css" rel="stylesheet">
 	<link href="/resources/css/datepickk.css" rel="stylesheet">
+	<link href="/resources/css/style-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 
 	<script src="/resources/js/jquery-1.11.1.js"></script>
@@ -45,7 +46,7 @@
 	</div>
 </section>
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js?ver=2"></script>
+<script src="/resources/js/common-scripts.js?ver=3"></script>
 
 <script type="application/javascript">
 	$(document).ready(function () {

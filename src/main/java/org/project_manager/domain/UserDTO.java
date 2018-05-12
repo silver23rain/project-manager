@@ -4,6 +4,8 @@ public class UserDTO {
 	private  String user_id;
 	private  String user_name;
 	private  String user_password;
+	private String user_img;
+
 
 	public UserDTO() {
 	}
@@ -30,6 +32,14 @@ public class UserDTO {
 
 	public void setUser_password(String user_password) {
 		this.user_password = user_password;
+	}
+
+	public String getUser_img() {
+		return user_img;
+	}
+
+	public void setUser_img(String user_img) {
+		this.user_img = user_img;
 	}
 
 	@Override

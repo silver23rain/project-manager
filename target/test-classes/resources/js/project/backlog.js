@@ -54,11 +54,14 @@ var Backlog = {
 				sprint_year: $(event.target).attr("sprint-year"),
 				sprint_no: $(event.target).attr("sprint-no"),
 				project_id: Project.Data.projectId,
-				bl_no: $(event.toElement).find('a').attr("bl-no")
+				bl_no: $(event.toElement).closest('li').find('a').attr("bl-no")
 			},
 			success: function() {
 				Backlog.checkisEmptyExcludeSprintBacklogList();
-			}
+			},
+            error: function (result) {
+                console.log(result);
+            }
 		})
 	}, bindEvents: function() {
 		$(".sortable").sortable({
@@ -69,7 +72,7 @@ var Backlog = {
 				Backlog.updateSprintKey(event);
 			}
 		});
-		// $(".sortable").disableSelection();
+		$(".sortable").disableSelection();
 
 		$("#backlog_create_btn").on("click", function() {
 			var backlogName = $("#backlog_name").val();
@@ -207,8 +210,12 @@ Backlog.Modal = {
 				method :"POST",
 				dataType :"json",
 				data : Backlog.Modal.getModalData(),
-				success: function(result) {
-					console.log("성공");
+				async:false,
+				success: function() {
+                    $(Backlog.Modal.modalDiv).modal('hide');
+                    $(Backlog.Modal.modalDiv).on('hidden.bs.modal', function (e) {
+                        window.location.reload();
+                    })
 				}
 			})
 		})

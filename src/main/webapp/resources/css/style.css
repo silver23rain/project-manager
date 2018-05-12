@@ -2203,15 +2203,15 @@ label {
 .sortable li input[type=checkbox]{
     margin-top: 0;
 }
-
-.task-content .ui-sortable > li:not(.hidden-li) {
+ .ui-sortable > li:not(.hidden-li) {
     padding: 11px 0 15px 35px !important ;
     position: relative;
-    background: #f5f6f8;
     margin-bottom: 2px;
     border-bottom   : none !important;
 }
-
+.task-content .ui-sortable > li:not(.hidden-li) {
+    background: #f5f6f8;
+}
 .ui-sortable li.list-primary {
     border-left: 3px solid #41CAC0;
 }

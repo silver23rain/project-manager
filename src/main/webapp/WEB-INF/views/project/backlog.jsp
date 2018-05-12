@@ -11,7 +11,7 @@
 
 </style>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="/resources/js/project/backlog.js?ver=2"></script>
+<script src="/resources/js/project/backlog.js?ver=3"></script>
 <script src="/resources/js/project/sprint.js"></script>
 <section id="main-content">
 	<section class="wrapper">

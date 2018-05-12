@@ -39,7 +39,7 @@ public class BoardController {
     public String showBoard (Model model, @RequestParam("project_id") Integer project_id, HttpServletRequest request) throws JsonProcessingException {
         UserDTO userDTO = authorityService.getUser(request);
         List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
-        List<BacklogDTO> includeSprint = backlogService.includeSprintBacklogList(project_id);
+        List<HashMap<String,Object>> includeSprint = backlogService.includeSprintBacklogList(project_id);
         List<HashMap<Integer,String>> backlogStatus = backlogService.getBacklogStatus();
         HashMap<String, Object> sprintData = sprintService.getOpenedSprintData(project_id);
 

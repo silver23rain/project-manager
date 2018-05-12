@@ -117,6 +117,8 @@ var Script = function () {
 
 	//bootstrap select
 	$(".dropdown-menu > li").on("click", function() {
+        $(".dropdown-menu > li").removeClass("selected");
+        $(this).addClass("selected");
         var $span = '<span class="fa fa-caret-down"></span>';
        $(this).parent().prev().html($(this).find('a').html() + $span);
 	});

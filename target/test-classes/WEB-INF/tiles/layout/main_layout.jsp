@@ -52,7 +52,7 @@
 </section>
 
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js?ver=2"></script>
+<script src="/resources/js/common-scripts.js?ver=3"></script>
 
 <script type="text/javascript" src="/resources/js/gritter/js/jquery.gritter.js"></script>
 <script type="text/javascript" src="/resources/js/gritter-conf.js"></script>
