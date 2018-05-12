@@ -11,7 +11,7 @@
 		<ul class="nav top-menu">
 			<!-- settings start -->
 			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 					<i class="fa fa-tasks"></i>
 					<span class="badge bg-theme">4</span>
 				</a>
@@ -21,7 +21,7 @@
 						<p class="green">프로젝트 진행사항</p>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<div class="task-info">
 								<div class="desc">DashGum Admin Panel</div>
 								<div class="percent">40%</div>
@@ -34,7 +34,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<div class="task-info">
 								<div class="desc">Database Update</div>
 								<div class="percent">60%</div>
@@ -47,7 +47,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<div class="task-info">
 								<div class="desc">Product Development</div>
 								<div class="percent">80%</div>
@@ -60,7 +60,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<div class="task-info">
 								<div class="desc">Payments Sent</div>
 								<div class="percent">70%</div>
@@ -80,7 +80,7 @@
 			<!-- settings end -->
 			<!-- inbox dropdown start-->
 			<li id="header_inbox_bar" class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 					<i class="fa fa-envelope-o"></i>
 					<span class="badge bg-theme">5</span>
 				</a>
@@ -90,7 +90,7 @@
 						<p class="green">새로운 알림</p>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<span class="photo"><img alt="avatar" src="/resources/img/ui-zac.jpg"></span>
 							<span class="subject">
                                     <span class="from">Zac Snider</span>
@@ -102,7 +102,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<span class="photo"><img alt="avatar" src="/resources/img/ui-divya.jpg"></span>
 							<span class="subject">
                                     <span class="from">Divya Manian</span>
@@ -114,7 +114,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<span class="photo"><img alt="avatar" src="/resources/img/ui-danro.jpg"></span>
 							<span class="subject">
                                     <span class="from">Dan Rogers</span>
@@ -126,7 +126,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">
+						<a href="#">
 							<span class="photo"><img alt="avatar" src="/resources/img/ui-sherman.jpg"></span>
 							<span class="subject">
                                     <span class="from">Dj Sherman</span>
@@ -138,7 +138,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="index.html#">알림 전체보기</a>
+						<a href="#">알림 전체보기</a>
 					</li>
 				</ul>
 			</li>

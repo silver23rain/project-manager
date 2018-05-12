@@ -34,7 +34,10 @@ function sprintStartCallback() {
         dataType: "json",
         data: Sprint.Modal.modalData,
         success: function () {
-            $('#simple_modal').modal('hide')
+            $('#simple_modal').modal('hide');
+            $('#simple_modal').on('hidden.bs.modal', function (e) {
+                window.location.reload();
+            })
         }
     })
 }

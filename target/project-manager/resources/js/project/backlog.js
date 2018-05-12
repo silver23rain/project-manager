@@ -1,3 +1,39 @@
+function validationBacklogName(backlogName) {
+    if (backlogName.length === 0) {
+        Project.Util.alertText($("#backlog_name_alert"), "백로그명을 반드시 입력해야 합니다.");
+        return false;
+    }
+    return true;
+}
+
+function createBacklog() {
+    var backlogName = $("#backlog_name").val();
+
+    if (!validationBacklogName(backlogName)) {
+    	return;
+    }
+
+    $.ajax({
+        url: "/project/backlog/create",
+        method: "POST",
+        dataType: "json",
+        data: {
+            project_id: Project.Data.projectId,
+            bl_title: backlogName
+        },
+        success: function (result) {
+            if (result.code === "SUCCESS") {
+                $("#backlog_name").val("");
+                window.location.reload();
+
+            } else if (result.code === "INSERT_ERROR") {
+                Project.Util.alertBanner($("#main-content .wrapper"), "백로그 생성하는데 실패했습니다.");
+            }
+        }
+    });
+
+}
+
 var Backlog = {
 	init: function() {
 		this.includeSprintBacklog();
@@ -7,7 +43,8 @@ var Backlog = {
 			if($(this).find("li.backlog-list").length !== 0) {
 				$(this).parent().parent().addClass("in");
 			}
-		})
+		});
+
 	},
 	includeSprintBacklog: function() {
 		$.each(backLogList, function(index, item) {
@@ -75,31 +112,17 @@ var Backlog = {
 		$(".sortable").disableSelection();
 
 		$("#backlog_create_btn").on("click", function() {
-			var backlogName = $("#backlog_name").val();
-			if(backlogName.length === 0) {
-				Project.Util.alertText($("#backlog_name_alert"), "백로그명을 반드시 입력해야 합니다.");
-				return;
-			}
-			$.ajax({
-				url: "/project/backlog/create",
-				method: "POST",
-				dataType: "json",
-				data: {
-					project_id: Project.Data.projectId,
-					bl_title: backlogName
-				},
-				success: function(result) {
-					if(result.code === "SUCCESS") {
-						$("#backlog_name").val("");
-						window.location.reload();
-
-					} else if(result.code === "INSERT_ERROR") {
-						Project.Util.alertBanner($("#main-content .wrapper"), "백로그 생성하는데 실패했습니다.");
-					}
-				}
-			});
-
+            createBacklog();
 		});
+        $("#backlog_name").keypress(function (e) {
+            if (e.which == 13){
+            	createBacklog();
+            }
+        });
+
+        $('[data-toggle="popover"]').popover({
+            trigger:"hover"
+        });
 
 		$(".backlog-id").on("click", function() {
 			var backlogKey = $(this).text();
@@ -197,7 +220,6 @@ Backlog.Modal = {
 	},
 	bindEvents: function() {
 		$(this.modalDiv).find("#modal_submit").on("click", function() {
-			/*TODO 저장시  modal 데이터 DB update*/
 
 			Backlog.Modal.setData({
 				bl_title: $(Backlog.Modal.modalDiv).find("[name=backlog_title]").val(),

@@ -28,8 +28,9 @@ var Board = {
         this.drawStatusBlock();
         this.initDrawBacklogs();
         this.bindEvents();
-        $('[data-toggle="tooltip"]').tooltip();
         Backlog.Modal.bindEvents();
+
+
     },
 	drawStatusBlock : function () {
         var source = $("#boardTemplate").html();
@@ -38,6 +39,9 @@ var Board = {
 
         $("#backlog_status_div").append(html);
 
+    },
+    initDrawBacklogs: initDrawBacklogs,
+	bindEvents: function () {
         $(".sortable").sortable({
             items: "li",
             connectWith: '.sortable',
@@ -64,9 +68,11 @@ var Board = {
                 })
             }
         });
-    },
-    initDrawBacklogs: initDrawBacklogs,
-	bindEvents: function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover({
+            trigger:"hover"
+        });
         $(".backlog-id").on("click", function(){
             var backlogKey = $(this).text();
             $.ajax({

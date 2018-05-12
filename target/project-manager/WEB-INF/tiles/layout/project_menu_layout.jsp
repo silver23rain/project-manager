@@ -13,8 +13,6 @@
 	<link href="/resources/css/style-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 
-	<script src="/resources/js/jquery-1.11.1.js"></script>
-	<script src="/resources/js/jquery-1.11.1.min.js"></script>
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -24,6 +22,9 @@
 </head>
 <body>
 <section id="container">
+	<script src="/resources/js/jquery-1.11.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="/resources/js/bootstrap.min.js"></script>
 	<script class="include" type="text/javascript" src="/resources/js/jquery.dcjqaccordion.2.7.js"></script>
 	<script src="/resources/js/jquery.scrollTo.min.js"></script>
@@ -34,8 +35,6 @@
 	<script src="/resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
 	<script src="/resources/js/common/util.js?ver=1"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sortable/0.9.13/jquery-sortable-min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="/resources/js/project/block.js"></script>
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="menu"/>

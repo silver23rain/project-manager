@@ -2262,4 +2262,9 @@ label {
     min-height: 900px;
 }
 
-
+.ellipsis {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    word-wrap:normal;
+    overflow:hidden;
+}

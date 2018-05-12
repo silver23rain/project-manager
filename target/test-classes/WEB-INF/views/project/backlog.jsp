@@ -1,7 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link href="/resources/css/style.css" rel="stylesheet">
-<link href="/resources/css/style-responsive.css" rel="stylesheet">
 <link rel="stylesheet" href="/resources/css/to-do.css">
 <style>
 	.status-badge {
@@ -10,7 +8,6 @@
 	}
 
 </style>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="/resources/js/project/backlog.js?ver=3"></script>
 <script src="/resources/js/project/sprint.js"></script>
 <section id="main-content">
@@ -89,8 +86,10 @@
 	<li class="list-warning backlog-list">
 		<i class=" fa  fa-angle-double-up"></i>
 		<div class="task-title">
-			<a bl-no="{{bl_no}}" class="col-md-3 col-sm-3  col-lg-1"> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
-			<span class="task-title-sp col-sm-6  col-md-7 col-lg-9">{{bl_title}}</span>
+			<a bl-no="{{bl_no}}" class="col-md-3 col-sm-3  col-lg-2"> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
+			<span class="task-title-sp col-sm-6 col- col-md-7 col-lg-9 ellipsis"
+				  data-container="body" data-toggle="popover" data-placement="bottom"
+				  data-content="{{bl_title}}">{{bl_title}}</span>
 			<span class="badge bg-warning">{{bl_status}}</span>
 			<div class="pull-right hidden-phone">
 				<span class="badge">{{story_point}}</span>

@@ -23,7 +23,7 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">백로그명</label>
 						<div class="col-sm-6">
-							<input type="text" class="form-control" name="backlog_title">
+							<input type="text" class="form-control ellipsis" name="backlog_title">
 						</div>
 					</div>
 					<div class="form-group">

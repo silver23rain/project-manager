@@ -15,6 +15,9 @@
     .sortable li:not(.hidden-li) {
         height: 80px;
     }
+    .backlog-list div>div{
+        padding-right: 0px ; !important;
+    }
 
 </style>
 <script src="/resources/js/project/backlog.js?ver=3"></script>
@@ -48,21 +51,23 @@
 </script>
 <script id="backlogTemplate" type="text/x-handlebars-template">
     <li>
-        <div class="col-md-11 col-sm-11 col-xs-11 col-lg-11">
-            <div class="col-md-4 col-xs-4">
-                <p class="tooltips" data-toggle="tooltip" data-placement="top" title="{{assigned_user}}">
+        <div class="col-md-11 col-sm-10 col-xs-11 col-lg-11">
+            <div class="col-md-4 col-xs-4" style="padding-left: 0px">
+                <p class="tooltips" data-toggle="tooltip" data-placement="top" title="{{assigned_user}} ">
                     {{#checkAssigned user_img}}
                     {{/checkAssigned}}
                 </p>
             </div>
-            <div class="col-md-8 col-xs-8">
+            <div class="col-md-8 col-xs-8" style="padding-right: 0px;">
                 <div class="backlog-key col-sm-12 goleft">
                     <a bl-no="{{bl_no}}"> <span class=" backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
                     <div class="pull-right hidden-phone">
                         <span class="badge">{{story_point}}</span>
                     </div>
                 </div>
-                <div class="backlog-title col-sm-12 goleft">
+                <div class="backlog-title col-sm-12 goleft ellipsis "
+                     data-container="body" data-toggle="popover" data-placement="bottom"
+                     data-content=" {{bl_title}}">
                     {{bl_title}}
                 </div>
             </div>
