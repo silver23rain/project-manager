@@ -1,10 +1,101 @@
+var getSprintDateFormat = function () {
+    var startDate = new Date(sprintData.start_date);
+    var endDate = new Date(sprintData.end_date);
+
+    return {
+        startDate: startDate.toJSON().substring(0, 10),
+        endDate: endDate.toJSON().substring(0, 10)
+    }
+
+};
 //TODO : amchart 동작 , 데이터 어떻게 넣을지 확인
-var chart = AmCharts.makeChart("chartdiv", {
+var getChartData = function () {
+    var sprintDeadLine = getSprintDateFormat();
+
+    return [{
+        "date": sprintDeadLine.startDate,
+        "color": "#CC0000",
+        "value": 8
+    }, {
+        "date": "2018-05-22",
+        "value": 5
+    }, {
+        "date": sprintDeadLine.endDate,
+        "color": "#CC0000",
+        "value": 0
+    }];
+};
+var getTrendLineData = function () {
+    var sprintDeadLine = getSprintDateFormat();
+    return [{
+        "finalDate": sprintDeadLine.endDate + " 12",
+        "finalValue": 0,
+        "initialDate": sprintDeadLine.startDate + " 12",
+        "initialValue": 8,
+        "lineColor": "#CC0000"
+    }]
+};
+var option = function () {
+    return {"type": "serial",
+        "theme": "light",
+        "marginRight":80,
+        "autoMarginOffset":20,
+        "dataDateFormat": "YYYY-MM-DD HH:NN",
+        "dataProvider": getChartData(),
+        "valueAxes": [{
+            "axisAlpha": 0,
+            "guides": [{
+                "fillAlpha": 0.1,
+                "fillColor": "#888888",
+                "lineAlpha": 0,
+                "toValue": 16,
+                "value": 10
+            }],
+            "position": "left",
+            "tickLength": 0
+        }],
+        "graphs": [{
+            "balloonText": "[[category]]<br><b><span style='font-size:14px;'>value:[[value]]</span></b>",
+            "bullet": "round",
+            "dashLength": 3,
+            "colorField":"color",
+            "valueField": "value"
+        }],
+        "trendLines": getTrendLineData(),
+        "chartScrollbar": {
+            "scrollbarHeight":2,
+            "offset":-1,
+            "backgroundAlpha":0.1,
+            "backgroundColor":"#888888",
+            "selectedBackgroundColor":"#67b7dc",
+            "selectedBackgroundAlpha":1
+        },
+        "chartCursor": {
+            "fullWidth":true,
+            "valueLineEabled":true,
+            "valueLineBalloonEnabled":true,
+            "valueLineAlpha":0.5,
+            "cursorAlpha":0
+        },
+        "categoryField": "date",
+        "categoryAxis": {
+            "parseDates": true,
+            "axisAlpha": 0,
+            "gridAlpha": 0.1,
+            "minorGridAlpha": 0.1,
+            "minorGridEnabled": true
+        },
+        "export": {
+            "enabled": true
+        }};
+};
+var chart = AmCharts.makeChart("chartdiv", option());
+/*var chart = AmCharts.makeChart("chartdiv", {
     "type": "serial",
     "theme": "light",
     "marginRight":80,
     "autoMarginOffset":20,
-    "dataDateFormat": "YYYY-MM-DD HH:NN",
+    "dataDateFormat": "YYYY-mm-DD HH:NN",
     "dataProvider": [{
         "date": "2012-01-01",
         "value": 8
@@ -56,10 +147,6 @@ var chart = AmCharts.makeChart("chartdiv", {
         "date": "2012-01-16",
         "value": 14
     }, {
-        "date": "2012-01-17",
-        "color":"#CC0000",
-        "value": 16
-    }, {
         "date": "2012-01-18",
         "value": 18
     }, {
@@ -71,10 +158,6 @@ var chart = AmCharts.makeChart("chartdiv", {
     }, {
         "date": "2012-01-21",
         "value": 12
-    }, {
-        "date": "2012-01-22",
-        "color":"#CC0000",
-        "value": 10
     }, {
         "date": "2012-01-23",
         "value": 8
@@ -104,12 +187,6 @@ var chart = AmCharts.makeChart("chartdiv", {
         "initialDate": "2012-01-02 12",
         "initialValue": 10,
         "lineColor": "#CC0000"
-    }, {
-        "finalDate": "2012-01-22 12",
-        "finalValue": 10,
-        "initialDate": "2012-01-17 12",
-        "initialValue": 16,
-        "lineColor": "#CC0000"
     }],
     "chartScrollbar": {
         "scrollbarHeight":2,
@@ -137,27 +214,17 @@ var chart = AmCharts.makeChart("chartdiv", {
     "export": {
         "enabled": true
     }
-});
+});*/
 
 // chart.addListener("dataUpdated", zoomChart);
 
 // function zoomChart(){
 //     chart.zoomToDates(new Date(2012, 0, 2), new Date(2012, 0, 13));
 // }
-var Report ={
+var Report = {
     init: function () {
         console.log("inut");
 
     },
-
-};
-var getSprintDateFormat = function () {
-    var startDate = new Date(sprintData.start_date);
-    var endDate= new Date(sprintData.end_date);
-
-    return{
-        startDate: startDate.toJSON().substring(0,11),
-        endDate : endDate.toJSON().substring(0,11)
-    }
 
 };
