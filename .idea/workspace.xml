@@ -7,25 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2221b30f-8ef6-4140-8078-f317bc6a1928" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/controller/ReportController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/project_menu.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/board.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/board.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/project_menu.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/board.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/board.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +42,8 @@
           <file leaf-file-name="report.jsp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+                <state relative-caret-position="395">
+                  <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -108,10 +90,10 @@
           <file leaf-file-name="report.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3427">
-                  <caret line="149" column="6" lean-forward="true" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+                <state relative-caret-position="115">
+                  <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
                   <folding>
-                    <marker date="1526205733280" expanded="true" signature="2017:2032" ph="..." />
+                    <marker date="1526205964089" expanded="true" signature="2054:2069" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -270,7 +252,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="960" />
@@ -854,7 +836,7 @@
       <workItem from="1525857645956" duration="9467000" />
       <workItem from="1525912281914" duration="28975000" />
       <workItem from="1526130222487" duration="35000" />
-      <workItem from="1526130321076" duration="10031000" />
+      <workItem from="1526130321076" duration="10239000" />
     </task>
     <servers />
   </component>
@@ -891,7 +873,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202491000" />
+    <option name="totallyTimeSpent" value="202699000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -903,7 +885,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1020,8 +1002,14 @@
           <line>95</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="52" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1473,18 +1461,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state relative-caret-position="395">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3427">
-          <caret line="149" column="6" lean-forward="true" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+        <state relative-caret-position="115">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding>
-            <marker date="1526205733280" expanded="true" signature="2017:2032" ph="..." />
+            <marker date="1526205964089" expanded="true" signature="2054:2069" ph="..." />
           </folding>
         </state>
       </provider>

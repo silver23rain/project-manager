@@ -1,3 +1,4 @@
+//TODO : amchart 동작 , 데이터 어떻게 넣을지 확인
 var chart = AmCharts.makeChart("chartdiv", {
     "type": "serial",
     "theme": "light",
