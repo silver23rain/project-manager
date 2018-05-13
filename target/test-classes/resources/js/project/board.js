@@ -1,4 +1,3 @@
-
 var initDrawBacklogs = function(){
     Handlebars.registerHelper('checkAssigned', function (user_img) {
         var imgDiv = "<img ";
@@ -11,20 +10,29 @@ var initDrawBacklogs = function(){
         return new Handlebars.SafeString(imgDiv);
     });
 
-	$(includeSprints).each(function (index, item) {
-		var stausId = item.status_id;
-		var $target = $("#backlog_status_div").find("[status-id="+stausId+"]");
+    $(includeSprints).each(function (index, item) {
+        var stausId = item.status_id;
+        var $target = $("#backlog_status_div").find("[status-id="+stausId+"]");
 
-		var source = $("#backlogTemplate").html();
+        var source = $("#backlogTemplate").html();
         var template = Handlebars.compile(source);
         var html = template(item);
 
         $target.append(html);
     });
 };
+
 var Board = {
 	init:function() {
-        $("#sprint_title").find("i").append(sprintData.project_name);
+	    var $sprintTitle = $("#sprint_title")
+        $sprintTitle.append(sprintData.project_name);
+
+        var startDate = new Date(sprintData.start_date).toLocaleDateString();
+        var endDate = new Date(sprintData.end_date).toLocaleDateString();
+
+        var dateString = "<span style='font-size:15px; margin-left : 5px'>[" +startDate +" ~ " +endDate +"]";
+        $sprintTitle.append(dateString);
+
         this.drawStatusBlock();
         this.initDrawBacklogs();
         this.bindEvents();
@@ -113,3 +121,5 @@ var Board = {
     }
 
 };
+
+

@@ -20,7 +20,7 @@
     </select>
 
     <select id="getOpenedSprintData" resultType="java.util.HashMap">
-       select sprint_year, sprint_no, sprint_goal, project_name
+       select sprint_year, sprint_no, sprint_goal, project_name, start_date, end_date
         from sprint join project
         ON sprint.project_id = project.project_id
         where sprint.project_id = #{project_id}

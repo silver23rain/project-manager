@@ -21,7 +21,7 @@
 
 </style>
 <script src="/resources/js/project/backlog.js?ver=3"></script>
-<script src="/resources/js/project/board.js?ver=1"></script>
+<script src="/resources/js/project/board.js?ver=2"></script>
 <section id="main-content">
     <section class="wrapper">
         <div class="col-md-12 mt">

@@ -7,37 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2221b30f-8ef6-4140-8078-f317bc6a1928" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/project_manager/controller/ReportController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog_detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog_detail.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/project/sprint.js" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/header.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog_detail.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/backlog_detail.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mappers/sprintMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/classes/mappers/sprintMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/tiles/tile/project_menu.jsp" />
       <change beforePath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/target/project-manager/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/css/style.css" afterPath="$PROJECT_DIR$/target/project-manager/resources/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/common-scripts.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/common-scripts.js" />
       <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/backlog.js" />
       <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/board.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/board.js" />
-      <change beforePath="$PROJECT_DIR$/target/project-manager/resources/js/project/sprint.js" afterPath="$PROJECT_DIR$/target/project-manager/resources/js/project/sprint.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/layout/project_menu_layout.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/layout/project_menu_layout.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/header.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog_detail.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/backlog_detail.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/project_menu.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/tiles/tile/project_menu.jsp" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/board.jsp" afterPath="$PROJECT_DIR$/target/test-classes/WEB-INF/views/project/board.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/css/style.css" afterPath="$PROJECT_DIR$/target/test-classes/resources/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/common-scripts.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/common-scripts.js" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/backlog.js" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/board.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/board.js" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/resources/js/project/sprint.js" afterPath="$PROJECT_DIR$/target/test-classes/resources/js/project/sprint.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,98 +54,38 @@
     <favorites_list name="project-manager" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5372051">
+    <splitter split-orientation="horizontal" split-proportion="0.5499463">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="board.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp">
+          <file leaf-file-name="report.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="322">
-                  <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+                <state relative-caret-position="60">
+                  <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="project_menu_layout.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp">
+          <file leaf-file-name="ReportController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/ReportController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="212">
-                  <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_layout.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/main_layout.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
-                  <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="board.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-230">
-                  <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BacklogController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/BacklogController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_menu.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="userMapper.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="23">
-                  <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                <state relative-caret-position="552">
+                  <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
                   <folding>
-                    <marker date="1525009017401" expanded="true" signature="276:294" ph="select * fro... user" />
-                    <marker date="1525009017401" expanded="true" signature="391:489" ph="select * fro... user" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="backlogMapper.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/backlogMapper.xml">
+          <file leaf-file-name="board.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="690">
-                  <caret line="30" column="94" lean-forward="false" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+                <state relative-caret-position="621">
+                  <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
                   <folding>
-                    <marker date="1526117160744" expanded="true" signature="283:362" ph="select max(b... backlog" />
-                    <marker date="1526117160744" expanded="true" signature="445:632" ph="insert into backlog... " />
-                    <marker date="1526117160744" expanded="true" signature="719:1066" ph="select bl_no... backlog" />
-                    <marker date="1526117160744" expanded="true" signature="1149:1621" ph="update backlog... " />
-                    <marker date="1526117160744" expanded="true" signature="1676:1846" ph="update backlog... " />
-                    <marker date="1526117160744" expanded="true" signature="1942:2553" ph="select bl_no... backlog" />
-                    <marker date="1526117160744" expanded="true" signature="2401:2552" ph="select sprin... sprint" />
-                    <marker date="1526117160744" expanded="true" signature="2517:2552" ph="select sprin... sprint" />
-                    <marker date="1526117160744" expanded="true" signature="2643:2671" ph="select * fro... backlog_status" />
-                    <marker date="1526117160744" expanded="true" signature="2785:2876" ph="select * fro... backlog" />
+                    <marker date="1526200769105" expanded="true" signature="1094:1127" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -166,43 +94,37 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="backlog.jsp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp">
+        <leaf>
+          <file leaf-file-name="board.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="89" column="38" lean-forward="true" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+                <state relative-caret-position="-460">
+                  <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common-scripts.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js">
+          <file leaf-file-name="report.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="359">
-                  <caret line="105" column="24" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-                  <folding />
+                <state relative-caret-position="3427">
+                  <caret line="149" column="6" lean-forward="true" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+                  <folding>
+                    <marker date="1526205733280" expanded="true" signature="2017:2032" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="backlog.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js">
+          <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/BoardController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="667">
-                  <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="50715">
-                  <caret line="2205" column="1" lean-forward="false" selection-start-line="2205" selection-start-column="1" selection-end-line="2205" selection-end-column="1" />
-                  <folding />
+                <state relative-caret-position="598">
+                  <caret line="55" column="86" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="86" />
+                  <folding>
+                    <marker date="1526107231695" expanded="true" signature="2366:2407" ph="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -214,16 +136,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>click</find>
-      <find>selected</find>
       <find>/resources/js/common-scripts.js?ver=2</find>
       <find>updateBa</find>
       <find>reload</find>
@@ -251,7 +171,9 @@
       <find>p</find>
       <find>popover</find>
       <find>popovers</find>
+      <find>board.js</find>
       <find>responsive</find>
+      <find>sprint_ti</find>
     </findStrings>
     <replaceStrings>
       <replace>common-scripts.js?ver=2</replace>
@@ -274,9 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/service/BacklogSerivce.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/service/ProjectService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/projectMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/ProjectDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/domain/ProjectDTO.java" />
@@ -300,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common/util.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog_detail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/SprintDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/service/SprintService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/header_only_layout.jsp" />
@@ -313,18 +231,22 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/common/util.css" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/service/BacklogService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/persistence/BacklogDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/controller/BoardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project_manager/domain/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/backlogMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/controller/BoardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project_manager/controller/ReportController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js" />
       </list>
     </option>
   </component>
@@ -507,25 +429,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -544,46 +447,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tiles" type="462c0819:PsiDirectoryNode" />
-              <item name="tile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-manager" type="b2602c69:ProjectViewProjectNode" />
@@ -634,7 +498,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="common&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;header.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;project&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;board.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/board.jsp&#10;backlog.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;header.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;main&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;header&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;backlogMapp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/backlogMapper.xml&#10;board.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/project/board.js&#10;backlo&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/project/backlog.js&#10;backlog.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;main_men&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;us&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/domain/UserDTO.java&#10;userMa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/userMapper.xml&#10;menu&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;backlog_&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog_detail.jsp&#10;util.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/common/util.js&#10;projec&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;backlogMa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/backlogMapper.xml&#10;backlogCont&#9;PSI&#9;JAVA://org.project_manager.controller.BacklogController&#10;BacklogCont&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/controller/BacklogController.java&#10;Board&#9;PSI&#9;JAVA://org.project_manager.controller.BoardController&#10;backlog.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;men&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp&#10;heade&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;board.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/board.jsp&#10;sty&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/style.css&#10;pro&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;comm&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;util.css&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/common/util.css&#10;backl&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;style.css&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/style.css&#10;panels.&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/html/panels.html&#10;Home&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/HomeController.java&#10;Boa&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/BoardController.java&#10;project_me&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp&#10;Back&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/BacklogController.java&#10;project_&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;tiles&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tiles.xml&#10;commo&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;proje&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/project/project_create.jsp&#10;sprint&#9;FILE&#9;file://D:/capstone/project-manager/src/main/resources/mappers/sprintMapper.xml&#10;BacklogCon&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/BacklogController.java&#10;sprintSer&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/service/SprintService.java&#10;SprintDa&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/persistence/SprintDAO.java&#10;sprintMa&#9;FILE&#9;file://D:/capstone/project-manager/src/main/resources/mappers/sprintMapper.xml&#10;Boar&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/BoardController.java&#10;back&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;das&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/dashboard.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="board.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/project/board.js&#10;BoardC&#9;PSI&#9;JAVA://org.project_manager.controller.BoardController&#10;repo&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/controller/ReportController.java&#10;report&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/report.jsp&#10;project_men&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp&#10;pro&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;project_ma&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/.idea/artifacts/project_manager_war.xml&#10;Boa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/controller/BoardController.java&#10;BoardCon&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/controller/BoardController.java&#10;SprintDT&#9;PSI&#9;JAVA://org.project_manager.domain.SprintDTO&#10;sprintMa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/sprintMapper.xml&#10;common&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;header.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;project&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;board.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/board.jsp&#10;backlog.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;header.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;main&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;header&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;backlogMapp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/backlogMapper.xml&#10;backlo&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/project/backlog.js&#10;backlog.&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;main_men&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;us&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/domain/UserDTO.java&#10;userMa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/userMapper.xml&#10;menu&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp&#10;backlog_&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog_detail.jsp&#10;util.js&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/resources/js/common/util.js&#10;projec&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;backlogMa&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/resources/mappers/backlogMapper.xml&#10;backlogCont&#9;PSI&#9;JAVA://org.project_manager.controller.BacklogController&#10;BacklogCont&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/java/org/project_manager/controller/BacklogController.java&#10;Board&#9;PSI&#9;JAVA://org.project_manager.controller.BoardController&#10;backlog.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;men&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp&#10;heade&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/header.jsp&#10;board.jsp&#9;FILE&#9;file://C:/Users/PEB/capstone/project-manager/src/main/webapp/WEB-INF/views/project/board.jsp&#10;sty&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/style.css&#10;comm&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;util.css&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/common/util.css&#10;backl&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/project/backlog.jsp&#10;style.css&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/css/style.css&#10;panels.&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/html/panels.html&#10;Home&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/HomeController.java&#10;project_me&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp&#10;Back&#9;FILE&#9;file://D:/capstone/project-manager/src/main/java/org/project_manager/controller/BacklogController.java&#10;project_&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp&#10;tiles&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/tiles/tiles.xml&#10;commo&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/resources/js/common-scripts.js&#10;proje&#9;FILE&#9;file://D:/capstone/project-manager/src/main/webapp/WEB-INF/views/project/project_create.jsp" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
     <property name="js.last.introduce.type" value="VAR" />
   </component>
@@ -990,7 +854,7 @@
       <workItem from="1525857645956" duration="9467000" />
       <workItem from="1525912281914" duration="28975000" />
       <workItem from="1526130222487" duration="35000" />
-      <workItem from="1526130321076" duration="2707000" />
+      <workItem from="1526130321076" duration="10031000" />
     </task>
     <servers />
   </component>
@@ -1027,7 +891,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195167000" />
+    <option name="totallyTimeSpent" value="202491000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1054,7 +918,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16451234" sideWeight="0.49785176" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12220917" sideWeight="0.49785176" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28907168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.024636058" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1067,7 +931,7 @@
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1122449" sideWeight="0.8" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1933405" sideWeight="0.8" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1157,7 +1021,7 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1220,43 +1084,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/domain/BacklogDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/org/project_manager/service/BacklogService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-524">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/datepickk.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6650">
-          <caret line="350" column="16" lean-forward="false" selection-start-line="350" selection-start-column="16" selection-end-line="350" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/SprintController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-95">
@@ -1303,25 +1130,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/persistence/SprintDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/service/SprintService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="47" column="46" lean-forward="false" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1449,24 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/BoardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <marker date="1526107231695" expanded="true" signature="2366:2407" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/service/BacklogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -1502,18 +1296,104 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="-3139">
+          <caret line="3" column="102" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="102" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/project_manager_war.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="89" column="38" lean-forward="true" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="105" column="24" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="258" column="40" lean-forward="false" selection-start-line="258" selection-start-column="40" selection-end-line="258" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/sprintMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <marker date="1526133179930" expanded="true" signature="294:519" ph="select sprin... sprint" />
+            <marker date="1526133179930" expanded="true" signature="610:803" ph="select sprin... sprint" />
+            <marker date="1526133179930" expanded="true" signature="895:1147" ph="select sprin... sprint" />
+            <marker date="1526133179930" expanded="true" signature="1228:1370" ph="INSERT INTO sprint... " />
+            <marker date="1526133179930" expanded="true" signature="1449:1706" ph="update sprint... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50715">
+        <state relative-caret-position="23">
           <caret line="2205" column="1" lean-forward="false" selection-start-line="2205" selection-start-column="1" selection-end-line="2205" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/project_menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="51" column="52" lean-forward="true" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/main_layout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/domain/SprintDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/service/SprintService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1526,10 +1406,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/header.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tile/main_menu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3139">
-          <caret line="3" column="102" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="102" />
+        <state relative-caret-position="392">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1553,59 +1433,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/main_layout.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="70" column="7" lean-forward="false" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="598">
+          <caret line="55" column="86" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="86" />
+          <folding>
+            <marker date="1526107231695" expanded="true" signature="2366:2407" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/project_menu_layout.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project_manager/controller/ReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="50" column="14" lean-forward="true" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/backlog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="89" column="38" lean-forward="true" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="552">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/board.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/common-scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="105" column="24" lean-forward="true" selection-start-line="105" selection-start-column="24" selection-end-line="105" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/backlog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state relative-caret-position="-460">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        <state relative-caret-position="621">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <marker date="1526200769105" expanded="true" signature="1094:1127" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/project/report.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/project/report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3427">
+          <caret line="149" column="6" lean-forward="true" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+          <folding>
+            <marker date="1526205733280" expanded="true" signature="2017:2032" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

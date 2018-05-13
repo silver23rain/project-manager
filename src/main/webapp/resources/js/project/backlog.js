@@ -254,5 +254,8 @@ Backlog.Modal = {
 			bl_no: this.bl_no,
 			project_id: Project.Data.projectId
 		}
-	}
+	},
+	setModalData: function () {
+		//TODO: modal 데이터 넣는 부분 -> 코드 정리
+    }
 };
