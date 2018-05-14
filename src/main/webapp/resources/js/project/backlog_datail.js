@@ -87,7 +87,6 @@ Backlog.Modal = {
 				Backlog.Modal.setData(backlogData);
 				var projectName =backlogData.project_name;
 				var $span = '<span class="fa fa-caret-down"></span>';
-
 				var $modal = $(Backlog.Modal.modalDiv);
 				$modal.find('[name=backlog_key]').text(backlogKey);
 				$modal.find("[name=project_name]").text(projectName);

@@ -25,7 +25,9 @@
 <section id="main-content">
     <section class="wrapper">
         <div class="col-md-12 mt">
-            <h2 id="sprint_title"><i class="fa fa-angle-right"></i></h2>
+            <h2 id="sprint_title"><i class="fa fa-angle-right"></i>
+	            <button id= "sprint_close_btn"class="btn btn-success btn-sm pull-right">스프린트 종료</button>
+            </h2>
             <div class="panel">
                 <div class="row" id="backlog_status_div">
                 </div>
@@ -50,10 +52,10 @@
     });
 </script>
 <script id="backlogTemplate" type="text/x-handlebars-template">
-    <li>
+    <li  bl-status="{{bl_status}}">
         <div class="col-md-11 col-sm-10 col-xs-11 col-lg-11">
             <div class="col-md-4 col-xs-4" style="padding-left: 0px">
-                <p class="tooltips" data-toggle="tooltip" data-placement="top" title="{{assigned_user}} ">
+                <p class="tooltips assigned-user" data-toggle="tooltip" data-placement="top" title="{{assigned_user}}">
                     {{#checkAssigned user_img}}
                     {{/checkAssigned}}
                 </p>
@@ -78,11 +80,11 @@
     {{#each.}}
     <div class="col-md-4 col-sm-4 mb">
         <div class="grey-panel pn ">
-            <div class="header-{{status_id}}">
+            <div class="header-{{status_id}}" >
                 <h5>{{bl_status}}</h5>
             </div>
             <div class="row">
-                <ul class="sortable task-list backlog-list" status-id="{{status_id}}">
+                <ul class="sortable task-list backlog-list" status-id="{{status_id}}" bl-status="{{bl_status}}">
                     <li class="hidden-li"></li>
                 </ul>
             </div>
