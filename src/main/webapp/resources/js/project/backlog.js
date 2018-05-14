@@ -1,36 +1,36 @@
 function validationBacklogName(backlogName) {
-    if (backlogName.length === 0) {
-        Project.Util.alertText($("#backlog_name_alert"), "백로그명을 반드시 입력해야 합니다.");
-        return false;
-    }
-    return true;
+	if(backlogName.length === 0) {
+		Project.Util.alertText($("#backlog_name_alert"), "백로그명을 반드시 입력해야 합니다.");
+		return false;
+	}
+	return true;
 }
 
 function createBacklog() {
-    var backlogName = $("#backlog_name").val();
+	var backlogName = $("#backlog_name").val();
 
-    if (!validationBacklogName(backlogName)) {
-    	return;
-    }
+	if(!validationBacklogName(backlogName)) {
+		return;
+	}
 
-    $.ajax({
-        url: "/project/backlog/create",
-        method: "POST",
-        dataType: "json",
-        data: {
-            project_id: Project.Data.projectId,
-            bl_title: backlogName
-        },
-        success: function (result) {
-            if (result.code === "SUCCESS") {
-                $("#backlog_name").val("");
-                window.location.reload();
+	$.ajax({
+		url: "/project/backlog/create",
+		method: "POST",
+		dataType: "json",
+		data: {
+			project_id: Project.Data.projectId,
+			bl_title: backlogName
+		},
+		success: function(result) {
+			if(result.code === "SUCCESS") {
+				$("#backlog_name").val("");
+				window.location.reload();
 
-            } else if (result.code === "INSERT_ERROR") {
-                Project.Util.alertBanner($("#main-content .wrapper"), "백로그 생성하는데 실패했습니다.");
-            }
-        }
-    });
+			} else if(result.code === "INSERT_ERROR") {
+				Project.Util.alertBanner($("#main-content .wrapper"), "백로그 생성하는데 실패했습니다.");
+			}
+		}
+	});
 
 }
 
@@ -96,9 +96,9 @@ var Backlog = {
 			success: function() {
 				Backlog.checkisEmptyExcludeSprintBacklogList();
 			},
-            error: function (result) {
-                console.log(result);
-            }
+			error: function(result) {
+				console.log(result);
+			}
 		})
 	}, bindEvents: function() {
 		$(".sortable").sortable({
@@ -112,54 +112,23 @@ var Backlog = {
 		$(".sortable").disableSelection();
 
 		$("#backlog_create_btn").on("click", function() {
-            createBacklog();
+			createBacklog();
 		});
-        $("#backlog_name").keypress(function (e) {
-            if (e.which == 13){
-            	createBacklog();
-            }
-        });
+		$("#backlog_name").keypress(function(e) {
+			if(e.which == 13) {
+				createBacklog();
+			}
+		});
 
-        $('[data-toggle="popover"]').popover({
-            trigger:"hover"
-        });
+		$('[data-toggle="popover"]').popover({
+			trigger: "hover"
+		});
 
 		$(".backlog-id").on("click", function() {
 			var backlogKey = $(this).text();
-			$.ajax({
-				url: "/project/backlog/detail",
-				method: "POST",
-				dataType: "json",
-				data: {
-					project_id: Project.Data.projectId,
-					bl_no: $(this).parent().attr("bl-no")
-				},
-				success: function(result) {
-					Backlog.Modal.setData(result);
-					var projectName = $("[project-id=" + Project.Data.projectId + "]").find("span").text();
+			var bl_no = $(this).parent().attr("bl-no");
+			Backlog.Modal.setModalData(backlogKey, bl_no,Project.Data.projectId);
 
-					var $modal = $(Backlog.Modal.modalDiv);
-					$modal.find('[name=backlog_key]').text(backlogKey);
-					$modal.find("[name=project_name]").text(projectName);
-					$modal.find("[name=backlog_title]").val(Backlog.Modal.bl_title);
-					$modal.find("[name=backlog_contents]").text(Backlog.Modal.bl_content === null ? "" : Backlog.Modal.bl_content);
-					$modal.find("[name=backlog_assigned]").text(Backlog.Modal.assigned_user === undefined ? "없음" : Backlog.Modal.assigned_user);
-
-					var $storyPoint = $modal.find("[name =story_point] li>a");
-					$storyPoint.removeClass("selected");
-					$storyPoint.each(function(index, item) {
-						if(Backlog.Modal.story_point.toString() === $(this).text()) {
-							$(this).addClass("selected");
-							var $span = '<span class="fa fa-caret-down"></span>';
-							$modal.find(".selectedItem").html(Backlog.Modal.story_point + $span);
-							return;
-						}
-					});
-					$modal.find(".selectedItem").text();
-
-					Backlog.Modal.show();
-				}
-			});
 		});
 
 		$("#sprint_create_btn").on("click", function() {
@@ -204,58 +173,3 @@ var Backlog = {
 	}
 };
 
-Backlog.Modal = {
-	modalDiv: "#backlogDetailModal",
-	bl_title: "",
-	assigned_user: undefined,
-	story_point: 0,
-	bl_content: null,
-	bl_no: null,
-	setData: function(data) {
-		this.bl_title = data.bl_title;
-		this.assigned_user = data.assigned_user? data.assigned_user:this.assigned_user;
-		this.story_point = data.story_point;
-		this.bl_content = data.bl_content;
-		this.bl_no = data.bl_no ? data.bl_no: this.bl_no;
-	},
-	bindEvents: function() {
-		$(this.modalDiv).find("#modal_submit").on("click", function() {
-
-			Backlog.Modal.setData({
-				bl_title: $(Backlog.Modal.modalDiv).find("[name=backlog_title]").val(),
-				story_point: $(Backlog.Modal.modalDiv).find('[name="story_point"] .selected ').text(),
-				bl_content: $(Backlog.Modal.modalDiv).find("[name=backlog_contents]").val()
-			});
-
-			$.ajax({
-				url:"/project/backlog/updateBacklog",
-				method :"POST",
-				dataType :"json",
-				data : Backlog.Modal.getModalData(),
-				async:false,
-				success: function() {
-                    $(Backlog.Modal.modalDiv).modal('hide');
-                    $(Backlog.Modal.modalDiv).on('hidden.bs.modal', function (e) {
-                        window.location.reload();
-                    })
-				}
-			})
-		})
-	},
-	show: function() {
-		$(this.modalDiv).modal('show');
-	},
-	getModalData: function() {
-		return {
-			bl_title: this.bl_title,
-			assigned_user: this.assigned_user,
-			story_point: this.story_point,
-			bl_content: this.bl_content,
-			bl_no: this.bl_no,
-			project_id: Project.Data.projectId
-		}
-	},
-	setModalData: function () {
-		//TODO: modal 데이터 넣는 부분 -> 코드 정리
-    }
-};

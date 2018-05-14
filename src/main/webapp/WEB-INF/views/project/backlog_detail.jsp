@@ -1,9 +1,11 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <style>
 	span [name ="backlog_key"]{
 		margin-right: 8px;
 	}
 </style>
+<script src="/resources/js/project/backlog_datail.js"></script>
 <div class="modal fade" id="backlogDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
@@ -30,7 +32,7 @@
 						<label class="col-sm-3 control-label">우선순위</label>
 						<div class="btn-group col-sm-4">
 							<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">선택하세요<span class="fa fa-caret-down"></span></button>
-							<ul class="dropdown-menu" role="menu" class ="backlog_priority">
+							<ul class="dropdown-menu" role="menu" name ="backlog_priority">
 								<li><a href="#"><i class=" fa  fa-angle-double-up"></i>최상</a></li>
 								<li><a href="#"><i class=" fa  fa-angle-up"></i>상</a></li>
 								<li><a href="#"><i class=" fa  fa-angle-down"></i>중</a></li>
@@ -40,8 +42,10 @@
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">담당자</label>
-						<div class="col-sm-4">
-							<a><p class="form-control-static" name ="backlog_assigned"></p></a>
+						<div class=" btn-group col-sm-4">
+							<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown"></button>
+							<ul class="dropdown-menu" role="menu" name ="backlog_assigned" aria-labelledby="dLabel">
+							</ul>
 						</div>
 					</div>
 					<div class="form-group">

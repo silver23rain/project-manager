@@ -16,19 +16,28 @@
     </insert>
 
     <select id="getBackLogList" resultType="java.util.HashMap">
-       select bl_no, bl_title, bl_writer, story_point, project_key, backlog_status.bl_status, backlog.sprint_year, backlog.sprint_no
+        select backlog.project_id,bl_no, bl_title, bl_writer,assigned_user ,story_point, project_key,
+        backlog_status.bl_status, backlog.sprint_year, backlog.sprint_no
         from backlog join project
         on backlog.project_id = project.project_id
         left join backlog_status
         on backlog.status_id = backlog_status.status_id
-        where backlog.project_id= #{project_id}
+        <choose>
+            <when test="user_id != null">
+                where assigned_user = #{user_id}
+                and bl_status is not null
+            </when>
+            <otherwise>
+                where backlog.project_id= #{project_id}
+            </otherwise>
+        </choose>
     </select>
 
     <update id="updateBacklog" parameterType="BacklogDTO">
         update backlog
         <set>
             <if test="bl_title== null">
-               sprint_no = #{sprint_no}, sprint_year = #{sprint_year}, status_id = #{status_id}
+                sprint_no = #{sprint_no}, sprint_year = #{sprint_year}, status_id = #{status_id}
             </if>
             <if test="bl_title !=null">
                 bl_title = #{bl_title}, bl_content = #{bl_content}, assigned_user = #{assigned_user}, story_point =
@@ -67,9 +76,11 @@
         select * from backlog_status
     </select>
 
-    <select id="backlogDetail" parameterType="java.util.HashMap" resultType="BacklogDTO">
-        select * from backlog
+    <select id="backlogDetail" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+       select backlog.*, project_name
+        from backlog join project
+        on backlog.project_id = project.project_id
         where bl_no = #{bl_no}
-        and project_id = #{project_id};
+        and backlog.project_id =#{project_id}
     </select>
 </mapper>

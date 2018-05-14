@@ -3,7 +3,7 @@ Project.Util = Project.Util || {};
 Project.Data = {
     projectId: "",
     isEmpty: function (data) {
-        if (data === null || data === undefined) {
+        if (data === null || data === undefined || data.length === 0) {
             return true;
         }
         return false;
@@ -29,8 +29,8 @@ Project.Util.alertBanner = function ($target, message) {
     return $alert
 };
 
-Project.Util.confirm = function (title, contents, submitCallback, cancelCallback) {
-    $.alert({
+Project.Util.confirm = function (title, contents, submitCallback, cancelCallback,boxWidth	) {
+    $.confirm({
         title: title,
         content: contents,
         buttons: {
@@ -49,6 +49,7 @@ Project.Util.confirm = function (title, contents, submitCallback, cancelCallback
                     }
                 }
             }
-        }
-    })
+        },
+		boxWidth :boxWidth ? boxWidth : '50%'
+	})
 };

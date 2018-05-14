@@ -83,40 +83,8 @@ var Board = {
         });
         $(".backlog-id").on("click", function(){
             var backlogKey = $(this).text();
-            $.ajax({
-                url: "/project/backlog/detail",
-                method: "POST",
-                dataType: "json",
-                data: {
-                    project_id: Project.Data.projectId,
-                    bl_no: $(this).parent().attr("bl-no")
-                },
-                success: function(result) {
-                    Backlog.Modal.setData(result);
-                    var projectName = $("[project-id=" + Project.Data.projectId + "]").find("span").text();
-
-                    var $modal = $(Backlog.Modal.modalDiv);
-                    $modal.find('[name=backlog_key]').text(backlogKey);
-                    $modal.find("[name=project_name]").text(projectName);
-                    $modal.find("[name=backlog_title]").val(Backlog.Modal.bl_title);
-                    $modal.find("[name=backlog_contents]").text(Backlog.Modal.bl_content === null ? "" : Backlog.Modal.bl_content);
-                    $modal.find("[name=backlog_assigned]").text(Backlog.Modal.assigned_user === undefined ? "없음" : Backlog.Modal.assigned_user);
-
-                    var $storyPoint = $modal.find("[name =story_point] li");
-                    $storyPoint.removeClass("selected");
-                    $storyPoint.each(function(index, item) {
-                        if(Backlog.Modal.story_point.toString() === $(this).text()) {
-                            $(this).addClass("selected");
-                            var $span = '<span class="fa fa-caret-down"></span>';
-                            $modal.find(".selectedItem").html(Backlog.Modal.story_point + $span);
-                            return;
-                        }
-                    });
-                    $modal.find(".selectedItem").text();
-
-                    Backlog.Modal.show();
-                }
-            });
+			var bl_no = $(this).parent().attr("bl-no");
+			Backlog.Modal.setModalData(backlogKey, bl_no,Project.Data.projectId);
         });
     }
 

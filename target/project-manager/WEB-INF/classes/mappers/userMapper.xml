@@ -13,4 +13,10 @@
         where user_id = #{user_id}
         AND user_password = #{user_password}
     </select>
+
+    <select id="getProjectUsers" resultType="ProjectUserDTO">
+        select *
+        from project_user
+        where project_id = #{project_id}
+    </select>
 </mapper>

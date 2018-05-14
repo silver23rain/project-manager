@@ -7,8 +7,8 @@
 	<link href="/resources/css/bootstrap.css" rel="stylesheet">
 	<!--external css-->
 	<link href="/resources/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-	<link href="/resources/css/style.css" rel="stylesheet">
 	<link href="/resources/css/common/util.css" rel="stylesheet">
+	<link href="/resources/css/style.css" rel="stylesheet">
 	<link href="/resources/css/datepickk.css" rel="stylesheet">
 	<link href="/resources/css/style-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
@@ -33,7 +33,7 @@
 	<script src="/resources/js/datepickk.js"></script>
 
 	<script src="/resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
-	<script src="/resources/js/common/util.js?ver=1"></script>
+	<script src="/resources/js/common/util.js"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
 	<script src="/resources/js/project/block.js"></script>
 	<tiles:insertAttribute name="header"/>
@@ -45,7 +45,7 @@
 	</div>
 </section>
 <!--common script for all pages-->
-<script src="/resources/js/common-scripts.js?ver=3"></script>
+<script src="/resources/js/common-scripts.js"></script>
 
 <script type="application/javascript">
 	$(document).ready(function () {
@@ -55,7 +55,6 @@
 			$(this).hide();
 		});
 	});
-
 </script>
 
 </body>

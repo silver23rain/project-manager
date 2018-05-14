@@ -102,10 +102,6 @@ var Script = function () {
         trigger: "hover"
     });
 
-    $('[data-toggle="popover"]').popover({
-        trigger:"hover",
-    });
-
 // custom bar chart
 
     if ($(".custom-bar-chart")) {
@@ -120,7 +116,7 @@ var Script = function () {
 
 
 	//bootstrap select
-	$(".dropdown-menu:not('.extended') > li").on("click", function() {
+	$(".dropdown-menu:not('.extended')").on("click","li", function() {
         $(".dropdown-menu > li").removeClass("selected");
         $(this).addClass("selected");
         var $span = '<span class="fa fa-caret-down"></span>';

@@ -87,7 +87,7 @@
 		<i class=" fa  fa-angle-double-up"></i>
 		<div class="task-title">
 			<a bl-no="{{bl_no}}" class="col-md-3 col-sm-3  col-lg-2"> <span class="task-title-sp backlog-id"><strong>[{{project_key}}-{{bl_no}}]</strong></span></a>
-			<span class="task-title-sp col-sm-6 col- col-md-7 col-lg-9 ellipsis"
+			<span class="task-title-sp col-sm-6 col- col-md-7 col-lg-8 ellipsis"
 				  data-container="body" data-toggle="popover" data-placement="bottom"
 				  data-content="{{bl_title}}">{{bl_title}}</span>
 			<span class="badge bg-warning">{{bl_status}}</span>

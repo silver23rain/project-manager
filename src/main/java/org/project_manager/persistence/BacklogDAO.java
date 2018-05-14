@@ -22,8 +22,8 @@ public class BacklogDAO {
         sqlSession.insert(namespace+".createBacklog",backlogDTO);
     }
 
-    public List<HashMap<String, Object>> getBackLogList (int project_id){
-        return sqlSession.selectList(namespace+".getBackLogList",project_id);
+    public List<HashMap<String, Object>> getBackLogList (HashMap<String,Object> hashMap){
+        return sqlSession.selectList(namespace+".getBackLogList",hashMap);
     }
 
     public void updateBacklog(BacklogDTO backlogDTO) throws Exception{
@@ -42,7 +42,7 @@ public class BacklogDAO {
         sqlSession.update(namespace+".updateStatus", backlogDTO);
     }
 
-    public BacklogDTO getBacklogDetail(HashMap<String,Object> hashMap){
+    public HashMap<String, Object> getBacklogDetail(HashMap<String,Object> hashMap){
         return sqlSession.selectOne(namespace+".backlogDetail",hashMap);
     }
 }
