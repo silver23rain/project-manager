@@ -56,12 +56,16 @@ var Backlog = {
 			}
 		})
 	}, checkisEmptyExcludeSprintBacklogList: function() {
-		if($("#backlog_list li.backlog-list").length === 0 || backLogList === undefined) {
-			var $li = "<li class='text-center' id='empty_backlog'>생성된 백로그가 없습니다.</li>";
-			$("#backlog_list").append($li);
-		} else {
-			$("#empty_backlog").remove();
+		if($("#backlog_list li.backlog-list").length === 0 || backLogList === undefined ) {
+			if($("#empty_backlog").length === 0){
+				var $li = "<li class='text-center' id='empty_backlog'>생성된 백로그가 없습니다.</li>";
+				$("#backlog_list").append($li);
+			}
+			return;
 		}
+
+		$("#empty_backlog").remove();
+
 	},
 	initBacklogTemplate: function($target, list) {
 		var source = $("#backlogListTemplate").html();
@@ -102,7 +106,7 @@ var Backlog = {
 		})
 	}, bindEvents: function() {
 		$(".sortable").sortable({
-			items: "li",
+			items: "li:not('#empty_backlog')",
 			connectWith: '.sortable',
 			group: '.sortable',
 			receive: function(event) {
