@@ -45,7 +45,7 @@ public class BoardController {
 		List<HashMap<String, Object>> includeSprint = backlogService.includeSprintBacklogList(project_id);
 		List<HashMap<Integer, String>> backlogStatus = backlogService.getBacklogStatus();
 		HashMap<String, Object> sprintData = sprintService.getOpenedSprintData(project_id);
-		List<ProjectUserDTO> userList = userService.getProjectUsers(project_id);
+		List<HashMap<String, Object>> userList = userService.getProjectUsers(project_id);
 
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
 		model.addAttribute("selectedProjectId", project_id);

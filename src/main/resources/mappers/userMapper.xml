@@ -14,9 +14,23 @@
         AND user_password = #{user_password}
     </select>
 
-    <select id="getProjectUsers" resultType="ProjectUserDTO">
-        select *
-        from project_user
+    <select id="getProjectUsers" resultType="java.util.HashMap">
+        select project_user.*, user.user_name
+        from project_user join user
+        on project_user.user_id = user.user_id
         where project_id = #{project_id}
+    </select>
+
+    <select id="searchUser" resultType ="UserDTO">
+        select user.user_id, user_name, user_img
+        from user
+        where ( user_name like CONCAT('%',#{searchData},'%')
+        or user_id like CONCAT('%',#{searchData},'%') )
+        and user_id not in (
+            select user.user_id
+            from project_user join user
+            on project_user.user_id = user.user_id
+            where project_id = #{project_id}
+        )
     </select>
 </mapper>

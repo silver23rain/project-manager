@@ -46,7 +46,6 @@ public class BacklogController {
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
 		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(userDTO.getUser_id(), project_id);
 		List<HashMap<String, Object>> sprintList = sprintService.getSrintNameList(project_id);
-		List<ProjectUserDTO> userList = userService.getProjectUsers(project_id);
 
 		model.addAttribute("projectList", objectMapper.writeValueAsString(projectList));
 		model.addAttribute("backLogList", objectMapper.writeValueAsString(backlogList));

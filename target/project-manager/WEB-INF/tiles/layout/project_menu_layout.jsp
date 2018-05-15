@@ -32,7 +32,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 	<script src="/resources/js/datepickk.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.5.rc1.min.css" />
 	<script src="/resources/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://w2ui.com/src/w2ui-1.5.rc1.min.js"></script>
 	<script src="/resources/js/common/util.js"></script>
 	<script type="text/javascript" src="/resources/js/handlebars-v4.0.11.js"></script>
 	<script src="/resources/js/project/block.js"></script>
