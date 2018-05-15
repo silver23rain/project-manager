@@ -44,7 +44,7 @@ public class BacklogController {
 		UserDTO userDTO = authorityService.getUser(request);
 
 		List<HashMap<String, Object>> projectList = projectService.getProjectList(userDTO.getUser_id());
-		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(request, project_id);
+		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(userDTO.getUser_id(), project_id);
 		List<HashMap<String, Object>> sprintList = sprintService.getSrintNameList(project_id);
 		List<ProjectUserDTO> userList = userService.getProjectUsers(project_id);
 

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.project_manager.domain.UserDTO;
 import org.project_manager.service.AuthorityService;
 import org.project_manager.service.BacklogService;
+import org.project_manager.service.FeedService;
 import org.project_manager.service.ProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,8 @@ public class HomeController {
 	AuthorityService authorityService;
 	@Inject
 	BacklogService backlogService;
+	@Inject
+	FeedService feedService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(HomeController.class);
 	private static ObjectMapper objectMapper = new ObjectMapper();
@@ -35,8 +38,11 @@ public class HomeController {
 	@RequestMapping("")
 	public String home(Model model, HttpServletRequest request) throws JsonProcessingException {
 		LOGGER.info("");
-		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(request,null);
+		UserDTO userDTO = authorityService.getUser(request);
+		List<HashMap<String, Object>> backlogList = backlogService.getBackLogList(userDTO.getUser_id(),null);
+		List<HashMap<String, Object>> feedList = feedService.getFeedList(userDTO.getUser_id());
 		model.addAttribute("backLogList", objectMapper.writeValueAsString(backlogList));
+		model.addAttribute("feedList", objectMapper.writeValueAsString(feedList));
 		return "/dashboard";
 	}
 

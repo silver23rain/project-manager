@@ -22,13 +22,34 @@ var initDrawBacklogs = function(){
     });
 };
 
+let updateFeed = function(_event) {
+	$.ajax({
+		url: "/project/board/insertFeed",
+		method: "POST",
+		dataType: "json",
+		data: {
+			sprint_year: sprintData.sprint_year,
+			sprint_no: sprintData.sprint_no,
+			project_id: Project.Data.projectId,
+			bl_no: $(_event.toElement).closest('li').find('a').attr("bl-no"),
+			target_user: $(_event.toElement)
+				.closest('li')
+				.find(".assigned-user")
+				.attr("data-original-title"),
+			comment: $(_event.toElement).closest('li').attr("bl-status") + " → " +
+			$(_event.target).attr("bl-status")
+		}, success: function(result) {
+			console.log(result.code);
+		}
+	});
+};
 var Board = {
 	init:function() {
-	    var $sprintTitle = $("#sprint_title")
-        $sprintTitle.append(sprintData.project_name);
+		var $sprintTitle = $("#sprint_title")
+		$sprintTitle.append(sprintData.project_name);
 
-        var startDate = new Date(sprintData.start_date).toLocaleDateString();
-        var endDate = new Date(sprintData.end_date).toLocaleDateString();
+		var startDate = new Date(sprintData.start_date).toLocaleDateString();
+		var endDate = new Date(sprintData.end_date).toLocaleDateString();
 
         var dateString = "<span style='font-size:15px; margin-left : 5px'>[" +startDate +" ~ " +endDate +"]";
         $sprintTitle.append(dateString);
@@ -55,7 +76,6 @@ var Board = {
             connectWith: '.sortable',
             group: '.sortable',
             receive: function (event) {
-                //TODO : when backlog id dropped, change backlog status.
                 var _event = event;
                 $.ajax({
                     url: "/project/backlog/updateBacklog",
@@ -69,26 +89,7 @@ var Board = {
                         status_id : $(_event.target).attr("status-id")
                     },
                     success: function() {
-
-						$.ajax({
-							url: "/project/board/insertFeed",
-							method: "POST",
-							dataType: "json",
-							data: {
-								sprint_year: sprintData.sprint_year,
-								sprint_no: sprintData.sprint_no,
-								project_id: Project.Data.projectId,
-								bl_no: $(_event.toElement).closest('li').find('a').attr("bl-no"),
-								target_user:$(_event.toElement)
-                                    .closest('li')
-                                    .find(".assigned-user")
-                                    .attr("data-original-title"),
-                                comment : $(event.toElement).closest('li').attr("bl-status") +" 에서" +
-								$(event.target).attr("bl-status") +" (으)로 백로그 상태가 변경 되었습니다."
-							},success :function(result) {
-                                console.log(result.code);
-							}
-						});
+						updateFeed(_event);
 
                     },
                     error: function (result) {

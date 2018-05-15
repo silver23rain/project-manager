@@ -8,4 +8,18 @@
         INSERT INTO feed (target_user, bl_no, comment, sprint_year, sprint_no, project_id)
         VALUES (#{target_user}, #{bl_no}, #{comment},  #{sprint_year},#{sprint_no},#{project_id})
     </insert>
+
+    <select id="getFeedList" resultType="java.util.HashMap">
+        <![CDATA[
+
+        select * from feed_view
+        where target_user <> #{user_id}
+        and project_id IN (
+            select project_id
+            from project_user
+            where user_id = #{user_id}
+        )order by regdate DESC
+         limit 10
+        ]]>
+    </select>
 </mapper>

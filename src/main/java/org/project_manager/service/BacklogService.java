@@ -18,11 +18,11 @@ public class BacklogService {
 	@Inject
 	AuthorityService authorityService;
 
-	public List<HashMap<String, Object>> getBackLogList(HttpServletRequest request, Integer project_id) {
-		UserDTO userDTO = authorityService.getUser(request);
+	public List<HashMap<String, Object>> getBackLogList(String user_id, Integer project_id) {
+
 		HashMap<String, Object> hashMap = new HashMap<>();
 		if(project_id == null) {
-			hashMap.put("user_id", userDTO.getUser_id());
+			hashMap.put("user_id", user_id);
 		}else{
 			hashMap.put("project_id", project_id);
 		}
