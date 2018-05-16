@@ -61,4 +61,14 @@
         and project_key = "ICEC"
     </select>
 
+    <insert id="addUser" parameterType="ProjectUserDTO">
+        insert into project_user (project_id, user_id, project_position)
+        values (#{project_id}, #{user_id}, #{project_position})
+    </insert>
+
+    <delete id="removeUser" parameterType="ProjectUserDTO">
+        delete from project_user
+        where project_id =#{project_id}
+        and user_id = #{user_id}
+    </delete>
 </mapper>

@@ -40,4 +40,12 @@ public class ProjectDAO {
 		return sqlSession.selectOne(namespace + ".getProjectName", project_id);
 	}
 
+	public void addUser(ProjectUserDTO projectUserDTO) throws Exception{
+		sqlSession.insert(namespace +".addUser", projectUserDTO);
+	}
+
+	public void removeUser(ProjectUserDTO projectUserDTO) throws Exception{
+		sqlSession.insert(namespace +".removeUser", projectUserDTO);
+	}
+
 }

@@ -1,11 +1,13 @@
 package org.project_manager.service;
 
+import jdk.nashorn.internal.ir.annotations.Immutable;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.project_manager.domain.ProjectDTO;
 import org.project_manager.domain.ProjectUserDTO;
 import org.project_manager.domain.ResultCode;
 import org.project_manager.domain.UserDTO;
 import org.project_manager.persistence.ProjectDAO;
+import org.project_manager.persistence.UserDAO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -77,4 +79,11 @@ public class ProjectService {
 		return projectDAO.getProjectList(user_id);
 	}
 
+	public void addUser (ProjectUserDTO projectUserDTO) throws Exception {
+		projectDAO.addUser(projectUserDTO);
+	}
+
+	public void removeUser (ProjectUserDTO projectUserDTO) throws Exception {
+		projectDAO.removeUser(projectUserDTO);
+	}
 }

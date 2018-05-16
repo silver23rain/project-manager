@@ -1,6 +1,7 @@
 package org.project_manager.persistence;
 
 import org.apache.ibatis.session.SqlSession;
+import org.project_manager.domain.ProjectUserDTO;
 import org.project_manager.domain.UserDTO;
 import org.springframework.stereotype.Repository;
 

@@ -5,6 +5,10 @@ Project.Setting = {
 	},
 	bindEvents: function() {
 		$("#invite_btn").on("click", function() {
+
+			var projectName = $("[project-id=" + Project.Data.projectId + "]").text();
+			$('[name="projectName"]').text(projectName);
+
 			$("#invite_modal").modal('show');
 		});
 
@@ -23,29 +27,56 @@ Project.Setting = {
 			})
 		});
 
-		$("#modal_submit").on("click", function() {
-			if(Project.Data.isEmpty(selectUser)) {
+		$(".remove-btn").on("click", function() {
+			var selectedUser = $(this).closest('td').prev().prev().prev().text();
+			if(Project.Data.isEmpty(selectedUser)) {
 				Project.Util.alert('경고', '선택한 사용자가 없습니다.');
 				return;
 			}
-			var imgSrc = "/resources/img/user/"+selectUser.user_img;
-			var $div = $("<div >")
+
+			var contents  = selectedUser +"를 프로젝트에서 제외 시키겠습니까?";
+			Project.Util.confirm('', contents, function() {
+				$.ajax({
+					method: "POST",
+					url: "/project/setting/removeUser",
+					dataType: "json",
+					data: {
+						project_id: Project.Data.projectId,
+						user_id: selectedUser,
+					}, success: function(result) {
+						initUserListGrid(result);
+					}
+				});
+			});
+		});
+
+		$("#modal_submit").on("click", function() {
+			if(Project.Data.isEmpty(selectSearchUser)) {
+				Project.Util.alert('경고', '선택한 사용자가 없습니다.');
+				return;
+			}
+			var imgSrc = "/resources/img/user/" + selectSearchUser.user_img;
+			var $div = $("<div style='padding-left: 32%;'>")
 				.append('<p class=" assigned-user">')
-				.append('<img src ="'+imgSrc +'" class="img-circle" width="60">')
-				.append($('<p> 아이디 : <strong>'+selectUser.user_id+'</strong></p>'))
-				.append($('<p> 이름 : <strong>'+selectUser.user_name+'</strong></p>'))
+				.append('<img src ="' + imgSrc + '" class="img-circle" width="60">')
+				.append($('<p> 아이디 : <strong>' + selectSearchUser.user_id + '</strong></p>'))
+				.append($('<p> 이름 : <strong>' + selectSearchUser.user_name + '</strong></p>'))
 				.append($('<label> 역할 : </label>'))
 				.append($('<select id="invite_position_select"><option>개발</option><option>기획</option><option>테스트</option>'));
 			var contents = $div;
-			Project.Util.confirm('초대하시겠습니까?',contents, function(selectUser) {
+
+			Project.Util.confirm('초대하시겠습니까?', contents, function() {
 				$.ajax({
-					method:POST,
+					method: "POST",
 					url: "/project/setting/addUser",
-					dataType:"json",
-					data : {
-						project_id : Project.Data.projectId,
-						user_id: selectUser.user_id,
-						user_position: $("#invite_position_select option:selected").val()
+					dataType: "json",
+					data: {
+						project_id: Project.Data.projectId,
+						user_id: selectSearchUser.user_id,
+						project_position: $("#invite_position_select option:selected").val()
+					}, success: function(result) {
+						$("#invite_modal").modal('hide');
+						initUserListGrid(result);
 					}
 				})
 			});
@@ -65,7 +96,7 @@ let showEmptyDataRecord = function(w2grid, $grid, message) {
 	}
 };
 
-var selectUser;
+var selectSearchUser;
 let initSearchResult = function(records) {
 	if(w2ui.search_result_grid) {
 		w2ui.search_result_grid.destroy();
@@ -115,7 +146,7 @@ let initSearchResult = function(records) {
 			event.onComplete = function() {
 				var sel_rec_ids = grid.getSelection();
 				if(sel_rec_ids.length) {
-					selectUser = grid.get(sel_rec_ids[0]);
+					selectSearchUser = grid.get(sel_rec_ids[0]);
 				} else {
 					console.log("Nothing selected!");
 				}
@@ -132,6 +163,7 @@ let initSearchResult = function(records) {
 	$searchResultGrid.w2grid(options);
 	//w2ui.search_result_grid.sort("project_name", "desc");
 };
+
 let initUserListGrid = function(records) {
 	if(w2ui.userlist_grid) {
 		w2ui.userlist_grid.destroy();
@@ -214,11 +246,6 @@ let initUserListGrid = function(records) {
 		}],
 		onRefresh: function() {
 			showEmptyDataRecord(w2ui.userlist_grid, $userListGrid, '프로젝트에 참여중인 사용자가 없습니다.');
-		},
-		onDblClick: function(event) {
-		},
-		onSearch: function(event) {
-
 		}
 
 	};

@@ -5,9 +5,10 @@
 		border-radius: 5px;
 	}
 
-	img{
+	#main-content img{
 		margin: 20px 108px 6px;
 	}
+
 	.img-div {
 		margin: 20px 108px 6px;
 		width: 150px;
@@ -15,11 +16,15 @@
 		background: url("/resources/img/global/connection.png") no-repeat;
 		opacity: 0.7;
 	}
+
 	#userlist_grid + .empty_row {
 		width: 100%;
 		margin-left: 55px
 	}
 
+	#invite_btn{
+		margin-right: 39px;
+	}
 </style>
 <script src ="/resources/js/project/setting.js"></script>
 <section id="main-content">
